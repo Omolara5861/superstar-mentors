@@ -3,7 +3,7 @@ import React from "react";
 type Column<T> = {
     header: string;
     accessor: keyof T;
-    render?: (value: T[keyof T], row: T) => React.ReactNode; // Custom render function
+    render?: (value: T[keyof T], row: T) => React.ReactNode;
 };
 
 type TableProps<T> = {
@@ -37,7 +37,7 @@ function Table<T>({ data, columns }: TableProps<T>) {
                                 >
                                     {column.render
                                         ? column.render(row[column.accessor], row)
-                                        : row[column.accessor]!}
+                                        : row[column.accessor]}
                                 </td>
                             ))}
                         </tr>
