@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../button/Button";
+import Button from "../../button/Button";
 import Link from "next/link";
 
 const HeroSection = () => {
