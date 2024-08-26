@@ -40,8 +40,8 @@ const MentorGrid = () => {
                                 />
                             </div>
                             {/* Mentor Info */}
-                            <div className="py-[31px] text-center text-[#01100AB2]">
-                                <p>{mentor.name}</p>
+                            <div className="py-[31px] text-center text-[#01100AB2] font-medium mentee">
+                                <p >{mentor.name}</p>
                                 <p className="text-sm">{mentor.title}</p>
                             </div>
                         </div>
