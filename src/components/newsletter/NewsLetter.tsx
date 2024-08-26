@@ -1,33 +1,34 @@
+import Image from "next/image";
 import * as React from "react";
+import Button from "../button/Button";
 
 function NewsLetter() {
   return (
-    <div className="flex flex-col items-center pt-5 pb-8 leading-snug bg-teal-50">
-      <div className="flex flex-col max-w-full text-center w-[506px]">
-        <div className="text-4xl font-bold tracking-tight text-zinc-950 max-md:max-w-full">
+    <div className="flex flex-col items-center pt-5 pb-2 leading-snug bg-background text-subtext">
+      <div className="flex flex-col text-center">
+        <h2>
           Join Our Newsletter
-        </div>
-        <div className="mt-2 text-xl tracking-normal text-neutral-600 max-md:max-w-full">
+        </h2>
+        <p className="mt-2">
           Subscribe to our newsletter to receive the latest update
-        </div>
+        </p>
       </div>
-      <div className="flex flex-wrap gap-2 items-end mt-6 max-md:max-w-full">
-        <div className="flex flex-col justify-center min-w-[240px] text-zinc-950 w-[618px] max-md:max-w-full">
-          <div className="text-sm font-medium tracking-normal uppercase max-md:max-w-full">
+      <div className="flex gap-2 items-end mt-5 lg:w-[794px] md:w-[694px] w-100">
+        <div className="flex flex-col w-4/5">
+          <div className="text-sm text-text font-medium tracking-normal uppercase mb-1">
             Email
           </div>
-          <div className="flex-1 shrink gap-2.5 self-stretch p-4 mt-2 w-full text-base tracking-normal rounded-lg border border-solid border-zinc-950 border-opacity-50 max-md:max-w-full">
-            Enter Email Address
-          </div>
+          <input type="text" placeholder="Enter Email Address"
+            className="outline-none text-text rounded-lg py-3 px-4 bg-transparent border border-[#01100A80]" />
         </div>
-        <div className="flex-1 shrink gap-2.5 self-stretch px-5 py-4 text-base font-medium tracking-normal text-center text-white whitespace-nowrap bg-emerald-800 rounded-lg w-[168px]">
-          Submit
-        </div>
+        <Button href='' btnText='Submit' width="168px"/>
       </div>
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/ca072e625faea8f185ecbb4829dcc7adf45d024081139db0fc040c14ce4a10ad?placeholderIfAbsent=true&apiKey=5589e537b6c14e9da606ae41fae20998"
-        className="object-contain self-stretch mt-3.5 w-full aspect-[14.49] max-md:max-w-full"
+      <Image
+        alt="Decoration Image"
+        width={1440}
+        height={100}
+        src="/deco1.png"
+        className="object-contain self-stretch mt-3.5 w-full"
       />
     </div>
   );
