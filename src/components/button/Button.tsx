@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ btnText, href, width }) => {
         >
             <button
                 style={{ width: width || 'auto' }}
-                className="inline-block bg-primary sm:w-auto py-3 px-4 rounded-lg text-white">
+                className="inline-block bg-primary sm:w-auto py-3 px-4 rounded-lg text-white font-medium">
                 {btnText}
             </button>
         </Link>
