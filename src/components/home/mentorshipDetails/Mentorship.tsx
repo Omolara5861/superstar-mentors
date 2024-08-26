@@ -39,7 +39,7 @@ const MentorshipDetails = () => {
 
                 {/* Benefits Section */}
                 <div className="lg:w-2/3 w-full">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                    <h2>
                         Unlock Your Potential with a Dedicated Mentor
                     </h2>
                     <p className="text-text mb-8">

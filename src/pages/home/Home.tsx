@@ -17,19 +17,11 @@ const HomePage = () => {
             <div className="container m-auto flex flex-col justify-center py-10 text-center bg-white text-zinc-950">
                 <div className="flex flex-col w-full max-md:max-w-full">
                     <div className="flex flex-col items-center w-full max-md:max-w-full">
-                        <div className="text-4xl font-bold tracking-tight leading-snug max-md:max-w-full">
+                        <h2 className="max-md:max-w-full">
                             “STUDY FROM THE MASTER AND BE A MASTER YOURSELF”
-                        </div>
-                        <div className="mt-4 text-lg tracking-normal leading-6 w-[593px] max-md:max-w-full text-subtext">
-                                Our website helps you easily{" "}
-                            <span className="font-medium text-primary">IDENTIFY</span>
-                       ,
-                            <span className="font-medium text-primary">NETWORK,</span>{" "}
-                            <span className="font-medium text-primary">LEARN, MENTOR,</span>
-                             and 
-                            <span className="font-medium text-primary">GROW</span>
-                            
-                                your skills from any place.
+                        </h2>
+                        <div className="mt-4 mb-10 w-[593px] max-md:max-w-full text-subtext">
+                                Our website helps you easily<span className="font-medium text-primary">IDENTIFY</span>, <span className="font-medium text-primary">NETWORK,</span> <span className="font-medium text-primary">LEARN, MENTOR,</span> and <span className="font-medium text-primary">GROW</span> your skills from any place.
                         </div>
                     </div>
                 

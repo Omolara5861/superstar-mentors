@@ -56,7 +56,7 @@ const TestimonialCarousel = () => {
         <section className="bg-green-50 py-16 relative">
             <div className="container mx-auto px-4">
                 {/* Title */}
-                <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+                <h2 className=" text-center mb-12">
                     Why rely solely on our words?
                 </h2>
 
