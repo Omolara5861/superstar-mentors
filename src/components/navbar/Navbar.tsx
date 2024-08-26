@@ -51,7 +51,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <div className="md:hidden">
+                <div className="md:hidden flex justify-between w-full">
+                    <div className="flex items-center mr-12">
+                        <div className="bg-black rounded-full w-8 h-8"></div>
+                        <span className="ml-2 text-lg font-bold">LOGO</span>
+                    </div>
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         className="text-gray-700 focus:outline-none"
@@ -80,7 +84,7 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <div className="md:hidden">
-                    <div className="flex flex-col items-start space-y-2 px-4 py-2">
+                    <div className="flex flex-col items-start space-y-2 px-4 py-2 bg-white">
                         <button
                             className="flex items-center space-x-1 "
                             onClick={() => setDropdownOpen(!dropdownOpen)}
