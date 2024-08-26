@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>
 
                     {/* Links */}
-                    <div className="flex flex-wrap justify-between lg:w-3/4">
+                    <div className="flex flex-wrap justify-between lg:w-3/4 lg:ml-8">
                         <div className="w-1/2 md:w-1/4 mb-8 md:mb-0">
                             <h5 className="text-lg font-semibold mb-9">SERVICES</h5>
                             <ul className="space-y-4 text-sm">
