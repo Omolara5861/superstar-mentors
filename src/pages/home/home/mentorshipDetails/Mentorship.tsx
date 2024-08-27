@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Button from '../../button/Button';
+import Button from '../../../../components/button/Button';
 
 const MentorshipDetails = () => {
     return (

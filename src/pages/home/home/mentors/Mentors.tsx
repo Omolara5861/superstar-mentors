@@ -1,7 +1,7 @@
 // components/MentorGrid.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '../../button/Button';
+import Button from '../../../../components/button/Button';
 
 const MentorGrid = () => {
     // Example mentor data
@@ -50,7 +50,7 @@ const MentorGrid = () => {
 
                 {/* Explore All Mentors Button */}
                 <div className="flex justify-center mt-12">
-                    <Button href='mentors' width='229px' btnText='Explore all Mentors'/>
+                    <Button href='mentors' width='229px' btnText='Explore all Mentors' />
                 </div>
             </div>
         </section>
