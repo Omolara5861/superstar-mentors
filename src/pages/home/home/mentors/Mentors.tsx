@@ -27,7 +27,7 @@ const MentorGrid = () => {
                 {/* Mentor Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {mentors.map((mentor, index) => (
-                        <div key={index} className="bg-white shadow-md rounded-[25px] overflow-hidden">
+                        <div key={index} className="bg-white shadow-md rounded-[25px] overflow-hidden mentee">
                             {/* Mentor Image */}
                             <div className="relative w-full">
                                 <Image
@@ -40,7 +40,7 @@ const MentorGrid = () => {
                                 />
                             </div>
                             {/* Mentor Info */}
-                            <div className="py-[31px] text-center text-[#01100AB2] font-medium mentee">
+                            <div className="py-[31px] text-center text-[#01100AB2] font-medium">
                                 <p >{mentor.name}</p>
                                 <p className="text-sm">{mentor.title}</p>
                             </div>
