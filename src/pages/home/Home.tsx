@@ -1,10 +1,11 @@
 "use client"
-import HeroSection from "../../components/home/hero/Hero";
-import MentorGrid from "../../components/home/mentors/Mentors";
-import MentorshipDetails from "../../components/home/mentorshipDetails/Mentorship";
+import HeroSection from "./home/hero/Hero";
+import MentorGrid from "./home/mentors/Mentors";
+import MentorshipDetails from "./home/mentorshipDetails/Mentorship";
 import TestimonialCarousel from "../../components/testimonial/Testimonial";
 import NewsLetter from "../../components/newsletter/NewsLetter";
 import Image from 'next/image';
+import FAQAccordion from "../../components/faqs/Faqs";
 
 
 const HomePage = () => {
@@ -21,13 +22,14 @@ const HomePage = () => {
                             “STUDY FROM THE MASTER AND BE A MASTER YOURSELF”
                         </h2>
                         <div className="mt-4 mb-10 w-[593px] max-md:max-w-full text-subtext">
-                                Our website helps you easily<span className="font-medium text-primary">IDENTIFY</span>, <span className="font-medium text-primary">NETWORK,</span> <span className="font-medium text-primary">LEARN, MENTOR,</span> and <span className="font-medium text-primary">GROW</span> your skills from any place.
+                            Our website helps you easily<span className="font-medium text-primary">IDENTIFY</span>, <span className="font-medium text-primary">NETWORK,</span> <span className="font-medium text-primary">LEARN, MENTOR,</span> and <span className="font-medium text-primary">GROW</span> your skills from any place.
                         </div>
                     </div>
-                
+
                     <Image src='/demo.gif' alt='Demo Gif' width={1000} height={1000} className="w-full" />
                 </div>
             </div>
+            <FAQAccordion />
             <NewsLetter />
         </>
     );
