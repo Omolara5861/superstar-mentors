@@ -165,14 +165,14 @@ const TestimonialCarousel = () => {
                         </div>
                </div>
                     {/* Testimonial Box */}
-                    <div className="bg-white w-full lg:w-3/5 lg:px-[61px] px-6 pt-[109px] pb-5 rounded-2xl testimonial-shadow mx-auto text-center relative mt-12">
+                    <div className="bg-white w-full lg:w-3/5 lg:px-[61px] px-3 pt-[109px] pb-5 rounded-2xl testimonial-shadow mx-auto text-center relative mt-12">
                         {/* Central Profile Image */}
                             <Image
                                 src={testimonials[currentIndex].image}
                                 alt={testimonials[currentIndex].author}
                                 width={112}
                                 height={112}
-                            className="w-36 h-36 rounded-full object-cover absolute left-1/2  -translate-x-1/2 top-[-50px]"
+                            className="w-36 h-36 -mt-16 rounded-full object-cover absolute left-1/2  -translate-x-1/2 top-[-50px]"
                             />
                         <p className="text-[#01100A80] italic mb-4">
                             {testimonials[currentIndex].text}
@@ -185,10 +185,10 @@ const TestimonialCarousel = () => {
 
                 {/* Navigation Arrows */}
                 <div className="flex justify-center space-x-8 mt-8">
-                    <button onClick={handlePrev}>
+                    <button className='pointer' onClick={handlePrev}>
                         <Image src='/arr-left.svg' alt='Arrow Left' width={54} height={32} />
                     </button>
-                    <button onClick={handleNext}>
+                    <button className='pointer' onClick={handleNext}>
                         <Image src='/arr-right.svg' alt='Arrow Right' width={54} height={32} />
                     </button>
                 </div>
