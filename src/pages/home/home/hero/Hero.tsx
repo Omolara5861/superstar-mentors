@@ -14,10 +14,10 @@ const HeroSection = () => {
                     <p className="mb-6">
                         By mastering a new skill, kickstart a project, secure your ideal career.
                     </p>
-                    <div className="flex justify-center lg:justify-start space-x-4">
+                    <div className="flex flex-col justify-center lg:flex-row lg:justify-start lg:space-x-4">
                         <Button href='/join' width='168px' btnText=' Join as a Mentee' />
                         <Link href='/mentor'>
-                            <button className="inline-block bg-transparent hover:bg-secondary hover:border-none font-medium lg:w-[168px] w-auto py-3 px-4 rounded-lg text-primary border-2 border-primary">
+                            <button className="lg:mt-0 mt-3 inline-block bg-transparent hover:bg-secondary hover:border-none font-medium w-[168px] py-3 px-4 rounded-lg text-primary border-2 border-primary">
                                 Mentor
                             </button>
                         </Link>
