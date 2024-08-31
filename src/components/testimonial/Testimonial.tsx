@@ -165,7 +165,7 @@ const TestimonialCarousel = () => {
                         </div>
                </div>
                     {/* Testimonial Box */}
-                    <div className="bg-white w-full lg:w-3/5 px-[61px] pt-[109px] pb-5 rounded-2xl testimonial-shadow mx-auto text-center relative mt-12">
+                    <div className="bg-white w-full lg:w-3/5 lg:px-[61px] px-6 pt-[109px] pb-5 rounded-2xl testimonial-shadow mx-auto text-center relative mt-12">
                         {/* Central Profile Image */}
                             <Image
                                 src={testimonials[currentIndex].image}

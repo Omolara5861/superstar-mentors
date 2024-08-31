@@ -26,58 +26,58 @@ const HeroSection = () => {
 
                 {/* Image Grid */}
                 <div className="lg:w-1/2 w-full grid grid-cols-2 gap-4">
-                    <div className="relative rounded-lg overflow-hidden">
+                    <div className="relative rounded-xl overflow-hidden">
                         <Image
-                            src="/carousel/producer.png"
+                            src="/carousel/producer.jpg"
                             alt="Mentorship Image 1"
                             width={250}
                             height={250}
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-xl"
                         />
                     </div>
-                    <div className="relative rounded-lg overflow-hidden">
+                    <div className="relative rounded-xl overflow-hidden">
                         <Image
-                            src="/carousel/actress.png"
+                            src="/carousel/actress.jpg"
                             alt="Mentorship Image 2"
                             width={250}
                             height={250}
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-xl"
                         />
                     </div>
-                    <div className="relative rounded-lg overflow-hidden">
+                    <div className="relative rounded-xl overflow-hidden">
                         <Image
-                            src="/carousel/choreo.png"
+                            src="/carousel/choreo.jpg"
                             alt="Mentorship Image 3"
                             width={250}
                             height={250}
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-xl"
                         />
                     </div>
-                    <div className="relative rounded-lg overflow-hidden">
+                    <div className="relative rounded-xl overflow-hidden">
                         <Image
-                            src="/carousel/comedy.png"
+                            src="/carousel/comedy.jpg"
                             alt="Mentorship Image 4"
                             width={250}
                             height={250}
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-xl"
                         />
                     </div>
-                    <div className="relative rounded-lg overflow-hidden">
+                    <div className="relative rounded-xl overflow-hidden">
                         <Image
-                            src="/carousel/production.png"
+                            src="/carousel/production.jpg"
                             alt="Mentorship Image 5"
                             width={250}
                             height={250}
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-xl"
                         />
                     </div>
-                    <div className="relative rounded-lg overflow-hidden">
+                    <div className="relative rounded-xl overflow-hidden">
                         <Image
-                            src="/carousel/cinema.png"
+                            src="/carousel/cinema.jpg"
                             alt="Mentorship Image 6"
                             width={250}
                             height={250}
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-xl"
                         />
                     </div>
                 </div>

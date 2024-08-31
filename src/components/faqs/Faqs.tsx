@@ -42,7 +42,7 @@ const FAQAccordion = () => {
                 src="/deco2.png"
                 className="object-contain self-stretch mt-3.5 w-full"
             />
-            <div className="container mx-auto px-4 mt-0 xl:mt-[-200px] lg:mt-[-100px] h-[600px]">
+            <div className="container mx-auto px-4 mt-0 xl:mt-[-200px] lg:mt-[-100px] lg:h-[600px]">
                 {/* Section Title */}
                 <h2 className='text-center mb-6'>
                     Frequently Asked Questions

@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ btnText, href, width }) => {
         >
             <button
                 style={{ width: width || 'auto' }}
-                className="inline-block bg-primary hover:bg-[#002C1C] sm:w-auto py-3 px-4 rounded-lg text-white font-medium">
+                className="inline-block bg-primary hover:bg-[#002C1C] !w-auto py-3 px-4 rounded-lg text-white font-medium">
                 {btnText}
             </button>
         </Link>

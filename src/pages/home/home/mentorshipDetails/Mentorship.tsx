@@ -7,8 +7,8 @@ const MentorshipDetails = () => {
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-12 lg:space-y-0 lg:gap-x-28">
                 {/* Mentor Card */}
                 {/* Mentor Image */}
-                <div className="mentor-parent">
-                    <div className="mentor-child relative  bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+                <div className="mentor-parent w-full lg:w-[418.75px]">
+                    <div className="mentor-child w-full lg:w-[418.75px] relative  bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
                 <div className="absolute top-[-100px] w-[150px] h-[150px] rounded-full">
                     <Image
                         src="/olayiwola.png"
