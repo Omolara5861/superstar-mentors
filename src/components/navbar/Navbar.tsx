@@ -83,7 +83,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden">
+                <div className="md:hidden sticky top-0 left-0 right-0">
                     <div className="flex flex-col items-start space-y-2 px-4 py-2 bg-white">
                         <button
                             className="flex items-center space-x-1 "
