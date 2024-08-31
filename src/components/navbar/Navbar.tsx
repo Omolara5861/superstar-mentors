@@ -13,10 +13,12 @@ const Navbar = () => {
                 {/* Logo */}
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8 items-center">
-                <div className="flex items-center mr-12">
-                    <div className="bg-black rounded-full w-8 h-8"></div>
-                    <span className="ml-2 text-lg font-bold">LOGO</span>
-                </div>
+                    <Link href='/'>
+                        <div className="flex items-center mr-12">
+                            <div className="bg-black rounded-full w-8 h-8"></div>
+                            <span className="ml-2 text-lg font-bold">LOGO</span>
+                        </div>
+                    </Link>
                     <div className="relative">
                         <button
                             className="flex items-center space-x-1"
@@ -83,7 +85,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden sticky top-0 left-0 right-0">
+                <div className="md:hidden fixed left-0 right-0 top-14 z-50">
                     <div className="flex flex-col items-start space-y-2 px-4 py-2 bg-white">
                         <button
                             className="flex items-center space-x-1 "
