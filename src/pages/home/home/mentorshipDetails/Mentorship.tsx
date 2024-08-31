@@ -3,34 +3,34 @@ import Button from '../../../../components/button/Button';
 
 const MentorshipDetails = () => {
     return (
-        <section className="bg-white py-[100px]">
+        <section className="bg-white py-[100px] mt-12">
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-12 lg:space-y-0 lg:gap-x-28">
                 {/* Mentor Card */}
+                {/* Mentor Image */}
                 <div className="mentor-parent">
-                    <div className="mentor-child  bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
-                        {/* Mentor Image */}
-                        <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
-                            <Image
-                                src="/olayiwola.png"
-                                alt="Olayiwola Rasaq"
-                                width={96}  // Adjusted width to match container size
-                                height={96} // Adjusted height to match container size
-                                className="object-cover"
-                            />
-                        </div>
+                    <div className="mentor-child relative  bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+                <div className="absolute top-[-100px] w-[150px] h-[150px] rounded-full">
+                    <Image
+                        src="/olayiwola.png"
+                        alt="Olayiwola Rasaq"
+                        width={150}  // Adjusted width to match container size
+                        height={150} // Adjusted height to match container size
+                        className="object-cover"
+                    />
+                </div>
                         {/* Mentor Info */}
                         <h3 className="text-xl font-bold text-[#3D3D3D]">Olayiwola Rasaq</h3>
                         <p className="text-md text-[#7D7D7D] mb-4">Movie Director</p>
                         {/* Services and Pricing */}
-                        <div className="w-full space-y-3 text-[#505050]">
-                            <div className="flex justify-between items-center bg-[#FAFAFA] p-3 rounded-lg">
+                        <div className="w-full mt-12 space-y-3 text-[#505050]">
+                            <div className="flex mb-6 justify-between items-center bg-[#FAFAFA] p-3 rounded-lg">
                                 <span>Mentorship</span>
                                 <span className="text-[#028053] font-bold">$300/month</span>
                             </div>
-                            <div className="flex justify-between items-center bg-[#FAFAFA] p-3 rounded-lg">
+                            <div className="flex mb-6 justify-between items-center bg-[#FAFAFA] p-3 rounded-lg">
                                 <span>Cv/Portfolio Review</span>
                             </div>
-                            <div className="flex justify-between items-center bg-[#FAFAFA] p-3 rounded-lg">
+                            <div className="flex mb-6 justify-between items-center bg-[#FAFAFA] p-3 rounded-lg">
                                 <span>1-on-1 Session</span>
                             </div>
                         </div>
