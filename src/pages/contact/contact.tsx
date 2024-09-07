@@ -1,9 +1,11 @@
 "use client"
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 const ContactPage = () => {
+    const router = useRouter();
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -22,7 +24,7 @@ const ContactPage = () => {
     };
 
     const goBack = () => {
-        throw new Error('Function not implemented.');
+       router.back();
     }
 
     return (
@@ -87,7 +89,7 @@ const ContactPage = () => {
                                     placeholder="Name"
                                     value={form.name}
                                     onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-green-400 outline-none"
+                                    className="w-full border border-[#01100A80] rounded-md px-4 py-2 focus:ring-2 focus:ring-green-400 outline-none"
                                 />
                             </div>
                             <div className="mb-4">
@@ -97,7 +99,7 @@ const ContactPage = () => {
                                     placeholder="Email"
                                     value={form.email}
                                     onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-green-400 outline-none"
+                                    className="w-full border border-[#01100A80] rounded-md px-4 py-2 focus:ring-2 focus:ring-green-400 outline-none"
                                 />
                             </div>
                             <div className="mb-4">
@@ -107,7 +109,7 @@ const ContactPage = () => {
                                     placeholder="Course"
                                     value={form.course}
                                     onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-green-400 outline-none"
+                                    className="w-full border border-[#01100A80] rounded-md px-4 py-2 focus:ring-2 focus:ring-green-400 outline-none"
                                 />
                             </div>
                             <div className="mb-4">
@@ -119,7 +121,7 @@ const ContactPage = () => {
                                     placeholder="Start typing..."
                                     value={form.message}
                                     onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md px-4 py-2 h-32 focus:ring-2 focus:ring-green-400 outline-none"
+                                    className="w-full border border-[#01100A80] rounded-md px-4 py-2 h-32 focus:ring-2 focus:ring-green-400 outline-none"
                                 />
                             </div>
                             <button
