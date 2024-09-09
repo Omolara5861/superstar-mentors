@@ -122,6 +122,14 @@ h3 {
   scrollbar-width: none;
 }
 
+.border-grad {
+  border: 1px solid transparent; /* Define a border, 'transparent' can be replaced with any color */
+  border-image-source: linear-gradient(180deg, #D8FAF2 0%, rgba(1, 16, 10, 0.78) 100%);
+  border-image-slice: 1; /* This slices the gradient at all corners and fills the border */
+  border-radius: 15px;
+  padding: 40px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
