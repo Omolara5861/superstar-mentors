@@ -32,7 +32,7 @@ const HeroSection = () => {
                             alt="Mentorship Image 1"
                             width={250}
                             height={250}
-                            className="object-cover rounded-xl"
+                            className="object-cover w-full h-full rounded-xl"
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden">
@@ -41,7 +41,7 @@ const HeroSection = () => {
                             alt="Mentorship Image 2"
                             width={250}
                             height={250}
-                            className="object-cover rounded-xl"
+                            className="object-cover w-full h-full rounded-xl"
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden">
@@ -50,7 +50,7 @@ const HeroSection = () => {
                             alt="Mentorship Image 3"
                             width={250}
                             height={250}
-                            className="object-cover rounded-xl"
+                            className="object-cover w-full h-full rounded-xl"
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden">
@@ -59,7 +59,7 @@ const HeroSection = () => {
                             alt="Mentorship Image 4"
                             width={250}
                             height={250}
-                            className="object-cover rounded-xl"
+                            className="object-cover w-full h-full rounded-xl"
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden">
@@ -68,7 +68,7 @@ const HeroSection = () => {
                             alt="Mentorship Image 5"
                             width={250}
                             height={250}
-                            className="object-cover rounded-xl"
+                            className="object-cover w-full h-full rounded-xl"
                         />
                     </div>
                     <div className="relative rounded-xl overflow-hidden">
@@ -77,7 +77,7 @@ const HeroSection = () => {
                             alt="Mentorship Image 6"
                             width={250}
                             height={250}
-                            className="object-cover rounded-xl"
+                            className="object-cover w-full h-full rounded-xl"
                         />
                     </div>
                 </div>
