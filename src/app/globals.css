@@ -128,7 +128,8 @@ h3 {
   border-image-slice: 1; /* This slices the gradient at all corners and fills the border */
   border-radius: 15px;
   padding: 40px;
-}
+  border: 1px solid;
+  }
 
 @layer utilities {
   .text-balance {
