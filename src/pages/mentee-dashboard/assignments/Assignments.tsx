@@ -1,7 +1,7 @@
 import Wrapper from '../../../components/mentee-dashboard/wrapper/Wrapper';
 
 
-function Assignments() {
+function AssignmentsPages() {
     return (
         <>
             <p>Assignments</p>
@@ -9,4 +9,4 @@ function Assignments() {
 
     );
 }
-export default Wrapper(Assignments);
+export default Wrapper(AssignmentsPages);
