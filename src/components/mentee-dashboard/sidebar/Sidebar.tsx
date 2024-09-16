@@ -10,27 +10,27 @@ const Sidebar = () => {
             <nav>
                 <ul>
                     <li className="mb-6">
-                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/dashboard">
+                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/mentee-dashboard">
                             <span className="ml-3">Dashboard</span>
                         </Link>
                     </li>
                     <li className="mb-6">
-                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/courses">
+                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/mentee-dashboard/courses">
                             <span className="ml-3">Courses</span>
                         </Link>
                     </li>
                     <li className="mb-6">
-                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/sessions">
+                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/mentee-dashboard/sessions">
                             <span className="ml-3">Sessions</span>
                         </Link>
                     </li>
                     <li className="mb-6">
-                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/assignments">
+                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/mentee-dashboard/assignments">
                             <span className="ml-3">Assignments</span>
                         </Link>
                     </li>
                     <li className="mb-6">
-                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/messages">
+                        <Link className="flex items-center text-gray-600 hover:text-green-500" href="/mentee-dashboard/messages">
                             <span className="ml-3">Messages</span>
                         </Link>
                     </li>
