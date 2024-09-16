@@ -1,7 +1,7 @@
 import Wrapper from '../../../components/mentee-dashboard/wrapper/Wrapper';
 
 
-function Sessions() {
+function SessionsPage() {
     return (
         <>
             <p>Sessions</p>
@@ -9,4 +9,4 @@ function Sessions() {
 
     );
 }
-export default Wrapper(Sessions);
+export default Wrapper(SessionsPage);
