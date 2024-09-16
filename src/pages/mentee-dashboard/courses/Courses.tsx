@@ -1,7 +1,7 @@
 import Wrapper from '../../../components/mentee-dashboard/wrapper/Wrapper';
 
 
-function Courses() {
+function CoursesPage() {
     return (
         <>
             <p>COURSES</p>
@@ -9,4 +9,4 @@ function Courses() {
 
     );
 }
-export default Wrapper(Courses);
+export default Wrapper(CoursesPage);
