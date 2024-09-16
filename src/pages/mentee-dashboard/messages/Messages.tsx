@@ -1,7 +1,7 @@
 import Wrapper from '../../../components/mentee-dashboard/wrapper/Wrapper';
 
 
-function Messages() {
+function MessagesPage() {
     return (
         <>
             <p>Messages</p>
@@ -9,4 +9,4 @@ function Messages() {
 
     );
 }
-export default Wrapper(Messages);
+export default Wrapper(MessagesPage);
