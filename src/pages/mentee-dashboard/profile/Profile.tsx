@@ -1,7 +1,7 @@
 import Wrapper from '../../../components/mentee-dashboard/wrapper/Wrapper';
 
 
-function Profile() {
+function ProfilePage() {
     return (
         <>
             <p>Profile</p>
@@ -9,4 +9,4 @@ function Profile() {
 
     );
 }
-export default Wrapper(Profile);
+export default Wrapper(ProfilePage);
