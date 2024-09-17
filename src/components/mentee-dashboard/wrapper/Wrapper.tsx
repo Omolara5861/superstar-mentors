@@ -7,7 +7,7 @@ const Wrapper = (WrappedComponent: React.ComponentType) => {
             <Sidebar />
 
             {/* Main content */}
-            <div className="flex-1 bg-gray-50 p-6">
+            <div className="h-screen flex-1 bg-[#F1FFFB] p-6">
                 <Header />
                 <WrappedComponent {...props} />
             </div>
