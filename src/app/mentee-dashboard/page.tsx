@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Wrapper from "../../components/mentee-dashboard/wrapper/Wrapper";
+import Calendar from "react-calendar";
 
 function Dashboard() {
     const [upcomingSessions, setUpcomingSessions] = useState([
@@ -14,6 +15,13 @@ function Dashboard() {
             date: "22/08/2024",
             time: "10:00am",
         },
+    ]);
+    const [date, setDate] = useState<Date | null>(new Date());
+    const [events] = useState([
+        { title: "Mentorship session with Omowunmi Dada", time: "9AM - 10AM" },
+        { title: "Videography lesson", time: "12PM - 2PM" },
+        { title: "Videography lesson", time: "12PM - 2PM" },
+        { title: "Videography lesson", time: "12PM - 2PM" },
     ]);
 
     return (
@@ -120,7 +128,6 @@ function Dashboard() {
                         ))}
                     </div>
                 </div>
-
                 {/* Right Section (Calendar & Profile Strength) */}
                 <div className="space-y-6">
                     {/* Profile Strength */}
@@ -139,34 +146,51 @@ function Dashboard() {
 
                     {/* Calendar Section */}
                     <div className="p-6 bg-white rounded-lg shadow-sm">
-                        <h3 className="text-sm font-semibold mb-4">
-                            September 2021
-                        </h3>
-                        <div className="grid grid-cols-7 gap-2">
-                            {["S", "M", "T", "W", "T", "F", "S"].map((day, idx) => (
+                        <div className="flex justify-between items-center mb-4">
+                            <h3 className="text-sm font-semibold">September 2021</h3>
+                            <div className="flex space-x-2">
+                                <button className="text-gray-600 hover:text-green-700">
+                                    &lt;
+                                </button>
+                                <button className="text-gray-600 hover:text-green-700">
+                                    &gt;
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* React Calendar */}
+                        <Calendar
+                            onChange={(value) => setDate(value as Date)}
+                            value={date}
+                            className="border-none text-center rounded-lg"
+                            tileClassName={({ date, view }) =>
+                                view === "month" && date.toDateString() === new Date().toDateString()
+                                    ? "bg-yellow-200 rounded-full text-black"
+                                    : ""
+                            }
+                            nextLabel=">>" // Custom right arrow
+                    prevLabel="<<" // Custom left arrow
+
+                        />
+
+                        {/* Event Cards */}
+                        <div className="mt-6 space-y-4">
+                            {events.map((event, index) => (
                                 <div
-                                    key={idx}
-                                    className="text-center font-semibold text-sm"
+                                    key={index}
+                                    className="flex justify-between items-center p-4 bg-gradient-to-r from-green-500 to-yellow-500 text-white rounded-lg shadow-sm"
                                 >
-                                    {day}
-                                </div>
-                            ))}
-                            {Array.from({ length: 30 }).map((_, dayIdx) => (
-                                <div
-                                    key={dayIdx}
-                                    className={`text-center text-sm ${dayIdx === 18
-                                            ? "bg-yellow-200 rounded-full"
-                                            : ""
-                                        }`}
-                                >
-                                    {dayIdx + 1}
+                                    <div>
+                                        <p className="font-medium">{event.title}</p>
+                                        <p className="text-sm">{event.time}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
     );
 }
 
