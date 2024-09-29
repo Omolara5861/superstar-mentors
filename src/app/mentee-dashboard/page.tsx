@@ -25,7 +25,7 @@ function Dashboard() {
     ]);
 
     return (
-        <div className="p-4 sm:p-6 lg:p-8 bg-gray-100 min-h-screen">
+        <div className="p-4 sm:p-6 lg:p-8 min-h-screen">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Left Section */}
                 <div className="md:col-span-2 space-y-6">
