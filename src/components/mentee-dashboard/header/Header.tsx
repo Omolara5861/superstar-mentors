@@ -8,7 +8,10 @@ const Header = () => {
                     <button className="mr-4">
                         <Image src="/dashboard/notification.svg" alt="Notifications" width={24} height={24} />
                     </button>
-                    <div className="bg-[#f5f5f5] p-[10px] rounded-lg flex w-[126px]">
+                    <button className="mr-4">
+                        <Image src="/dashboard/message1.svg" alt="Notifications" width={24} height={24} />
+                    </button>
+                    <div className="p-[10px] rounded-lg flex w-[126px]">
                         <Image src="/dashboard/profile-pic.png" width={50} height={50} alt="Profile" className="rounded-full mr-[14px]" />
                         <Image src="/dashboard/caret-down.svg" width={12} height={12} alt="Arrow Down" />
                     </div>
