@@ -1,10 +1,13 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import path from 'path';
 import { useEffect, useState } from 'react';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     // Toggle Sidebar Open/Close
     const toggleSidebar = () => {
@@ -59,8 +62,12 @@ const Sidebar = () => {
                 <nav>
                     <ul>
                         {links.map(link => (
-                            <li className="mb-6" key={link.href}>
-                                <Link className="flex items-center text-gray-600 hover:text-green-500" href={link.href}>
+                            <li className="mb-4" key={link.href}>
+                                <Link
+                                    className={`flex p-2 rounded items-center text-[#205924] link ${pathname === link.href ? 'active' : ''
+                                        }`}
+                                    href={link.href}
+                                >
                                     <Image width={24} height={24} src={link.src} alt={link.alt} />
                                     <span className="ml-3">{link.text}</span>
                                 </Link>
