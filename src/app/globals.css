@@ -161,3 +161,13 @@ abbr:where([title]) {
   text-decoration: none !important;
   border-bottom: none !important;
 }
+
+.link:hover, .active {
+  border-right: 3px solid var(--Accent, #FFC145);
+  background: #066921;
+  color: #fff;
+}
+
+.link:hover img, .active img {
+  filter: brightness(0) invert(1) !important;
+}
