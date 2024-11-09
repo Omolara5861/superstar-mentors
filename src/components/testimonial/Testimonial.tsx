@@ -172,7 +172,7 @@ const TestimonialCarousel = () => {
                                 alt={testimonials[currentIndex].author}
                                 width={112}
                                 height={112}
-                            className="w-36 h-36 -mt-16 rounded-full object-cover absolute left-1/2  -translate-x-1/2 top-[-50px]"
+                            className="w-36 h-36 -mt-16 rounded-full object-cover absolute left-1/2  -translate-x-1/2 top-0"
                             />
                         <p className="text-[#01100A80] italic mb-4">
                             {testimonials[currentIndex].text}
