@@ -3,9 +3,9 @@ import Image from "next/image";
 const Header = () => {
     return (
         <header>
-            <div className="py-2 px-6 flex justify-end items-center">
+            <div className="py-1 px-6 flex justify-end items-center">
                 <div className="flex items-center">
-                    <button className="mr-4">
+                    <button className="mr-1">
                         <Image src="/dashboard/notification.svg" alt="Notifications" width={24} height={24} />
                     </button>
                     <button className="mr-4">
