@@ -16,6 +16,7 @@ const config: Config = {
         colors: {
         primary: '#006A50', // Primary color
         secondary: '#D8FAF2', // Secondary color
+        tertiary: '#066921', // Secondary color
         accent: '#FFC145', // Accent color
         background: '#F1FFFB', // Background color
         subtext: '#525353', // Subtext color
