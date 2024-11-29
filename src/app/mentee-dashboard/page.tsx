@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Wrapper from "../../components/mentee-dashboard/wrapper/Wrapper";
 import Calendar from "react-calendar";
+import Image from "next/image";
 
 function Dashboard() {
     const [upcomingSessions, setUpcomingSessions] = useState([
@@ -25,62 +26,72 @@ function Dashboard() {
     ]);
 
     return (
-        <div className="p-4 sm:p-6 lg:p-8 min-h-screen">
+        <div className="p-2 min-h-screen">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Left Section */}
-                <div className="md:col-span-2 space-y-6">
+                <div className="md:col-span-2 space-y-2">
                     {/* User Information */}
-                    <div className="p-6 bg-white rounded-lg shadow-sm flex justify-between items-center">
-                        <div>
-                            <h3 className="text-lg font-semibold">Loveth James! 👋</h3>
-                            <p className="text-sm text-gray-600">
+                    <div className="p-6 bg-tertiary rounded-lg shadow-sm flex justify-between items-center mb-5">
+                        <div className="!text-[#F5F5F5]">
+                            <p className="font-medium">Loveth James! 👋</p>
+                            <p className="text-sm">
                                 You have 4 upcoming sessions
                             </p>
                         </div>
-                        <button className="bg-transparent border border-green-700 text-green-700 px-4 py-2 rounded-md hover:bg-green-100">
-                            View profile
-                        </button>
+                        <Image src="/dashboard/amico.svg" width={80} height={80} alt="Rolls" />
                     </div>
 
                     {/* Cards Section */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {/* Enrolled Courses */}
-                        <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                            <div className="bg-green-700 text-white p-3 w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                {/* Add Icon */}
+                        <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
+                            <div className="flex gap-3 pb-2">
+                                <Image src="/dashboard/enroll-course.svg" width={40} height={40} alt="Course" />
+                                <div>
+                                    <h4 className="text-2xl font-bold text-left">0</h4>
+                                    <p className="text-xl text-left text-subtext">Enrolled Course</p>
+                                </div>
                             </div>
-                            <h4 className="text-lg font-semibold">0 Enrolled Course</h4>
-                            <button className="text-green-700 font-medium mt-2">
-                                View details ➔
+                            <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
+                                View details
+                                <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
                             </button>
                         </div>
 
                         {/* Certificates */}
-                        <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                            <div className="bg-yellow-400 text-white p-3 w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                {/* Add Icon */}
+                        <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
+                            <div className="flex gap-3 pb-2">
+                                <Image src="/dashboard/certificate.svg" width={40} height={40} alt="Course" />
+                                <div>
+                                    <h4 className="text-2xl font-bold text-left">0</h4>
+                                    <p className="text-xl text-left text-subtext">Certificates</p>
+                                </div>
                             </div>
-                            <h4 className="text-lg font-semibold">0 Certificates</h4>
-                            <button className="text-green-700 font-medium mt-2">
-                                View details ➔
-                            </button>
+                                <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
+                                    View details
+                                <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
+                                </button>
                         </div>
 
                         {/* More Certificates */}
-                        <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                            <div className="bg-purple-500 text-white p-3 w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                {/* Add Icon */}
+                        <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
+                            <div className="flex gap-3 pb-2">
+                                <Image src="/dashboard/certificates.svg" width={40} height={40} alt="Course" />
+                                <div>
+                                    <h4 className="text-2xl font-bold text-left">0</h4>
+                                    <p className="text-xl text-left text-subtext">Certificates</p>
+                                </div>
                             </div>
-                            <h4 className="text-lg font-semibold">0 Certificates</h4>
-                            <button className="text-green-700 font-medium mt-2">
-                                View details ➔
+                            <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
+                                View details
+                                <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
                             </button>
                         </div>
                     </div>
 
                     {/* Recent Sessions */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Recent Sessions</h3>
+                        <h3 className="text-xl font-medium mt-6 mb-4 text-subtext">Recent Sessions</h3>
                         {upcomingSessions.map((session, index) => (
                             <div
                                 key={index}
