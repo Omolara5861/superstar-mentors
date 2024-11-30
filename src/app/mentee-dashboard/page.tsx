@@ -16,6 +16,11 @@ function Dashboard() {
             date: "22/08/2024",
             time: "10:00am",
         },
+        {
+            mentor: "Omowunmi Dada",
+            date: "22/08/2024",
+            time: "10:00am",
+        }
     ]);
     const [date, setDate] = useState<Date | null>(new Date());
     const [events] = useState([
@@ -95,48 +100,39 @@ function Dashboard() {
                         {upcomingSessions.map((session, index) => (
                             <div
                                 key={index}
-                                className="flex flex-wrap items-center bg-white p-4 rounded-lg shadow-sm mb-4"
+                                className={`flex justify-between bg-[#FFFEFE] p-5 rounded-lg shadow-md mb-4 ${index === 0 ? 'border-[0.5px] border-primary' : ''
+                                    }`}
                             >
-                                <div className="flex-grow">
-                                    <p className="font-semibold">
-                                        Upcoming mentorship session with{" "}
-                                        {session.mentor}
-                                    </p>
-                                    <p className="text-sm text-gray-600">
-                                        <span className="inline-block">
-                                            <svg
-                                                className="h-5 w-5 inline-block mr-1"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                {/* Add Calendar Icon */}
-                                            </svg>
-                                            {session.date}
-                                        </span>
-                                        <span className="ml-4">
-                                            <svg
-                                                className="h-5 w-5 inline-block mr-1"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                {/* Add Clock Icon */}
-                                            </svg>
-                                            {session.time}
-                                        </span>
-                                    </p>
+                                <div className="flex gap-3 w-2/5">
+                                    <Image src="/dashboard/ellipse.svg" width={50} height={50} alt="Profile" className="h-fit" />
+                                    <div>
+                                        <p className="text-subtext mb-0">
+                                            Upcoming mentorship session with{" "}
+                                        </p>
+                                        <p className="text-text text-sm mb-2">{session.mentor}</p>
+                                        <div className="flex gap-4 text-sm text-gray-600">
+                                            <div className="flex gap-2">
+                                                <Image src="/dashboard/calendar.svg" width={24} height={24} alt="Calendar" />
+                                                <span>{session.date}</span>
+                                            </div>
+                                            <div className="flex gap-2">
+                                                <Image src="/dashboard/clock.svg" width={24} height={24} alt="Clock" />
+                                                <span>{session.time}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="flex space-x-2">
-                                    <button className="bg-green-700 text-white px-4 py-2 rounded-md">
+                                <div className="flex space-x-2 w-2/5 self-center">
+                                    <button className="bg-primary text-white h-[54px] rounded-md w-1/2">
                                         Join session
                                     </button>
-                                    <button className="border border-green-700 text-green-700 px-4 py-2 rounded-md hover:bg-green-100">
+                                    <button className="border border-primary text-primary h-[54px] rounded-md hover:bg-green-100 w-1/2">
                                         Message
                                     </button>
                                 </div>
                             </div>
                         ))}
+
                     </div>
                 </div>
                 {/* Right Section (Calendar & Profile Strength) */}
