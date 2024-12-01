@@ -153,18 +153,6 @@ function Dashboard() {
 
                     {/* Calendar Section */}
                     <div className="p-6 bg-white rounded-lg shadow-sm">
-                        <div className="flex justify-between items-center mb-4">
-                            <h3 className="text-sm font-semibold">September 2021</h3>
-                            <div className="flex space-x-2">
-                                <button className="text-gray-600 hover:text-green-700">
-                                    &lt;
-                                </button>
-                                <button className="text-gray-600 hover:text-green-700">
-                                    &gt;
-                                </button>
-                            </div>
-                        </div>
-
                         {/* React Calendar */}
                         <Calendar
                             onChange={(value) => setDate(value as Date)}
@@ -172,11 +160,11 @@ function Dashboard() {
                             className="border-none text-center rounded-lg"
                             tileClassName={({ date, view }) =>
                                 view === "month" && date.toDateString() === new Date().toDateString()
-                                    ? "bg-yellow-200 rounded-full text-black"
+                                    ? "bg-accent text-primary rounded-full text-black"
                                     : ""
                             }
-                            nextLabel=">>" // Custom right arrow
-                    prevLabel="<<" // Custom left arrow
+                            nextLabel=">" // Custom right arrow
+                    prevLabel="<" // Custom left arrow
 
                         />
 
