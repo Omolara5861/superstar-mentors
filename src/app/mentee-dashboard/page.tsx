@@ -139,20 +139,21 @@ function Dashboard() {
                 <div className="space-y-6">
                     {/* Profile Strength */}
                     <div className="p-6 bg-white rounded-lg shadow-sm">
-                        <h3 className="text-sm font-semibold">Profile Strength</h3>
-                        <div className="mt-2">
+                        <div className="flex justify-between mb-4">
+                            <h3 className="text-lg font-medium text-subtext">Profile Strength</h3>
+                        <button className="text-sm text-subtext border w-[79px] p-1 rounded-2xl h-fit border-primary">Poor</button>
+                        </div>
                             <div className="bg-gray-200 rounded-full h-2 w-full">
                                 <div
                                     className="bg-yellow-400 h-2 rounded-full"
                                     style={{ width: "30%" }}
                                 ></div>
                             </div>
-                            <p className="text-sm text-gray-600 mt-1">Poor</p>
-                        </div>
                     </div>
 
                     {/* Calendar Section */}
-                    <div className="p-6 bg-white rounded-lg shadow-sm">
+                    <div className="p-6 bg-white rounded-lg shadow-md
+                    ">
                         {/* React Calendar */}
                         <Calendar
                             onChange={(value) => setDate(value as Date)}
