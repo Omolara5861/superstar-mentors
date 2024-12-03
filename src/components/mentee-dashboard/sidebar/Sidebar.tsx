@@ -73,6 +73,12 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                         ))}
+                        <li className='absolute bottom-3'>
+                            <Link className="flex items-center text-[#FF0000] hover:text-green-500" href=''>
+                                <Image width={24} height={24} src='/icons/logout.svg' alt='Logout icon' />
+                                <span className="ml-3">Logout</span>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -137,6 +143,12 @@ const Sidebar = () => {
                                     </Link>
                                 </li>
                             ))}
+                            <li className='absolute bottom-3'>
+                                <Link className="flex items-center text-[#FF0000] hover:text-green-500" href=''>
+                                    <Image width={24} height={24} src='/icons/logout.svg' alt='Logout icon'/>
+                                    <span className="ml-3">Logout</span>
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
