@@ -174,12 +174,10 @@ function Dashboard() {
                             {events.map((event, index) => (
                                 <div
                                     key={index}
-                                    className="flex justify-between items-center p-4 bg-gradient-to-r from-green-500 to-yellow-500 text-white rounded-lg shadow-sm"
+                                    className="flex justify-between py-5 px-2 bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB] rounded-s"
                                 >
-                                    <div>
                                         <p className="font-medium">{event.title}</p>
                                         <p className="text-sm">{event.time}</p>
-                                    </div>
                                 </div>
                             ))}
                         </div>
