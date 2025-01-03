@@ -83,7 +83,7 @@ const AssignmentsPage = () => {
         }
     };
 
-    const columns = [
+    const columns: any = [
         { header: "Task Title", accessor: "taskTitle" },
         { header: "Description", accessor: "description" },
         { header: "Start Date", accessor: "startDate" },
