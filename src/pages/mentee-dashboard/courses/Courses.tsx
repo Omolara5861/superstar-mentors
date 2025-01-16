@@ -58,7 +58,7 @@ function CoursesPage() {
             {/* Main Content */}
             <main className="flex-1">
                 {/* Header */}
-                <h3 className="text-2xl font-bold text-[#555555]">Courses</h3>
+                <h3 className="text-2xl font-medium text-[#555555]">Courses</h3>
                 <div className=" text-[#555555] mb-8">
                     Dashboard → Courses
                 </div>
