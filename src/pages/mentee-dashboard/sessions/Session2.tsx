@@ -60,13 +60,20 @@ const SessionsDetails = () => {
                             <Image src='/dashboard/members.svg' alt="Audio" width={40} height={40} />
                         </div>
                         <h3 className="text-2xl font-medium text-text mt-8">Getting started with Music</h3>
-                        <div className="flex gap-2 my-2">
-                            <Image src='/dashboard/img.svg' alt="Course" width={50} height={50} />
-                            <div>
-                                <p className="text-text text-lg font-medium">Eze Babatunde</p>
-                                <p className="text-subtext">
-                                    Music Mentor
-                                </p>
+                        <div className="flex justify-between">
+                            <div className="flex gap-2 my-2">
+                                <Image src='/dashboard/img.svg' alt="Course" width={50} height={50} />
+                                <div>
+                                    <p className="text-text text-lg font-medium">Eze Babatunde</p>
+                                    <p className="text-subtext">
+                                        Music Mentor
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex gap-1">
+                                <Image src='/dashboard/instagram.svg' alt="Instagram" width={20} height={20} />
+                                <Image src='/dashboard/whatsapp.svg' alt="Instagram" width={20} height={20} />
+                                <Image src='/dashboard/x.svg' alt="Instagram" width={20} height={20} />
                             </div>
                         </div>
 
