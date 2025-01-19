@@ -188,6 +188,6 @@ abbr:where([title]) {
   color: #fff;
 }
 
-.link:hover img, .active img {
+.link:hover img, .active img, .active1 img {
   filter: brightness(0) invert(1) !important;
 }

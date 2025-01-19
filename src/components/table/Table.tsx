@@ -15,13 +15,13 @@ type TableProps<T extends Record<string, any>> = {
 function Table<T extends Record<string, any>>({ data, columns }: TableProps<T>) {
     return (
         <div className="overflow-x-auto">
-            <table className="min-w-full bg-white border border-gray-200">
+            <table className="min-w-full mt-6">
                 <thead>
-                    <tr className="bg-gray-100">
+                    <tr>
                         {columns.map((column, index) => (
                             <th
                                 key={index}
-                                className="text-left px-6 py-3 text-sm font-semibold text-gray-700 border-b"
+                                className="text-left font-bold text-xl px-6 py-3 text-primary uppercase"
                             >
                                 {column.header}
                             </th>
@@ -34,7 +34,7 @@ function Table<T extends Record<string, any>>({ data, columns }: TableProps<T>) 
                             {columns.map((column, colIndex) => (
                                 <td
                                     key={colIndex}
-                                    className="px-6 py-4 text-sm text-gray-600 border-b"
+                                    className="px-6 pt-6 pb-4 text-sm font-semibold text-[#555555] border-b"
                                 >
                                     {column.render
                                         ? column.render(row[column.accessor] as T[keyof T], row)
