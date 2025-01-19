@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 type UploadModalProps = {
@@ -13,7 +14,7 @@ const UploadModal: React.FC<UploadModalProps> = ({ onClose, onSuccess, onError }
         if (file) {
             // Simulate a successful file upload
             setTimeout(() => {
-                const success = Math.random() > 0.5; // Simulate random success or failure
+                const success = Math.random() > 0.5;
                 if (success) {
                     onSuccess();
                 } else {
@@ -24,24 +25,32 @@ const UploadModal: React.FC<UploadModalProps> = ({ onClose, onSuccess, onError }
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg shadow-lg p-6 w-96">
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-lg font-bold">Upload Your Assignment</h2>
-                    <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
-                        ✕
-                    </button>
+                <div className="text-right"><button onClick={onClose} className="text-gray-700 hover:text-text">
+                    ✕
+                </button></div>
+                <div className="text-center">
+                    <h3 className="text-xl text-primary font-bold">Videography Assignment</h3>
+                <p className="text-center mb-4 text-text">01/09/2025 <br /> 11:40AM</p>
                 </div>
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                <div className="border-2 border-dashed flex flex-col justify-center items-center border-gray-300 rounded-lg p-6 ">
+                    <Image
+                                            src="/dashboard/upload.svg"
+                                            alt="Sort Icon"
+                                            width={22}
+                                            height={16}
+                                        />
                     <input
                         type="file"
                         className="hidden"
                         id="file-upload"
                         onChange={(e) => setFile(e.target.files?.[0] || null)}
                     />
+                    <p className="text-[#030F2D] text-sm mt-2">Format: Doc, PDF, JPG</p>
                     <label
                         htmlFor="file-upload"
-                        className="cursor-pointer text-green-600 hover:underline"
+                        className="cursor-pointer text-xs text-[#FFC145] hover:underline"
                     >
                         {file ? file.name : "Browse Files"}
                     </label>
@@ -49,7 +58,7 @@ const UploadModal: React.FC<UploadModalProps> = ({ onClose, onSuccess, onError }
                 <button
                     onClick={handleFileUpload}
                     disabled={!file}
-                    className={`mt-4 px-4 py-2 w-full text-white rounded ${file ? "bg-green-600 hover:bg-green-700" : "bg-gray-300"
+                    className={`mt-4 px-4 py-2 w-full text-white rounded ${file ? "bg-green-500 hover:bg-green-600" : "bg-gray-300"
                         }`}
                 >
                     Submit
