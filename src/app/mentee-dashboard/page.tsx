@@ -100,10 +100,10 @@ function Dashboard() {
                         {upcomingSessions.map((session, index) => (
                             <div
                                 key={index}
-                                className={`flex justify-between bg-[#FFFEFE] p-5 rounded-lg shadow-md mb-4 ${index === 0 ? 'border-[0.5px] border-primary' : ''
+                                className={`flex flex-col md:flex-row justify-between bg-[#FFFEFE] p-5 rounded-lg shadow-md mb-4 ${index === 0 ? 'border-[0.5px] border-primary' : ''
                                     }`}
                             >
-                                <div className="flex gap-3 w-2/5">
+                                <div className="flex flex-col md:flex-row gap-3 md:w-2/5">
                                     <Image src="/dashboard/ellipse.svg" width={50} height={50} alt="Profile" className="h-fit" />
                                     <div>
                                         <p className="text-subtext mb-0">
@@ -122,15 +122,16 @@ function Dashboard() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex space-x-2 w-2/5 self-center">
-                                    <button className="bg-primary text-white h-[54px] rounded-md w-1/2">
+                                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full md:w-2/5 self-center mt-4 md:mt-0">
+                                    <button className="bg-primary text-white h-[54px] rounded-md w-full md:w-1/2">
                                         Join session
                                     </button>
-                                    <button className="border border-primary text-primary h-[54px] rounded-md hover:bg-green-100 w-1/2">
+                                    <button className="border border-primary text-primary h-[54px] rounded-md hover:bg-green-100 w-full md:w-1/2">
                                         Message
                                     </button>
                                 </div>
                             </div>
+
                         ))}
 
                     </div>

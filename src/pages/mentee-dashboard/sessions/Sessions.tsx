@@ -19,7 +19,7 @@ function SessionsPage() {
                     
 
             {/* Current Session Header */}
-            <div className="bg-white shadow-[0px_2px_4px_0px_#00000014] rounded-lg p-4 flex items-center justify-between mb-6 border-[0.5px] border-primary">
+            <div className="bg-white shadow-[0px_2px_4px_0px_#00000014] rounded-lg p-4 flex lg:flex-row flex-col items-center justify-between mb-6 border-[0.5px] border-primary">
                 <div className="flex gap-2">
                     <Image src='/dashboard/img.svg' alt="Course" width={50} height={50} />
                     <div>

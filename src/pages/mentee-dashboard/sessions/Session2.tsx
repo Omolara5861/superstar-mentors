@@ -34,7 +34,7 @@ const SessionsDetails = () => {
     };
 
     return (
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
 
             {/* Main Content */}
             <div className="flex-1 p-6">
@@ -120,7 +120,7 @@ const SessionsDetails = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="w-72 ">
+            <div className="lg:w-72 w-full p-4">
                 {/* Learning Reminder */}
                 <div className="bg-[#19470A] text-[#f5f5f5] p-4 rounded-lg mb-6 shadow-[0px_2px_2px_0px_#0000000D] text-xs">
                     <p className="uppercase font-medium mb-3">Learning Reminder</p>
@@ -133,7 +133,7 @@ const SessionsDetails = () => {
                 </div>
 
                 {/* Course Topics */}
-                <div className="w-72 bg-white border-[0.5px] border-[#c4c2c2] p-4 rounded-lg">
+                <div className="lg:w-72 w-full bg-white border-[0.5px] border-[#c4c2c2] p-4 rounded-lg">
                     {/* Course Topics */}
                     <div>
                         <div className="flex justify-between items-center mb-4">
