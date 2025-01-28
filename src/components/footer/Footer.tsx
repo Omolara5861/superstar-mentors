@@ -54,7 +54,7 @@ const Footer = () => {
 
                 {/* Social Media and Copyright */}
                 <div className="flex flex-col lg:flex-row justify-between items-center mt-11 border-t border-[#FEFEFF] pt-4">
-                    <span className="text-sm">© 2024 — <Link href='https://digitalcareers.academy'>Digital Careers Academy</Link></span>
+                    <span className="text-sm">© 2024 — <Link href='https://digitalcareers.academy' target='_blank'>Digital Careers Academy</Link></span>
                     <div className="flex space-x-4 mt-4 lg:mt-0">
                         {/* Replace `#` with actual social media links */}
                         <Link href="#" target='_blank'><Image width={35} height={35} src="/icons/twitter.svg" alt="Twitter" /></Link>
