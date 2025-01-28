@@ -4,10 +4,25 @@ import Wrapper from '../../../components/mentee-dashboard/wrapper/Wrapper';
 import Link from 'next/link';
 import { useState } from 'react';
 import SessionDetails from './Session2';
+import UpcomingSessions from '../../../components/dashboard/UpcomingSessions';
+import PreviousClassRecords from '../../../components/dashboard/PreviousClassRecords';
 
 function SessionsPage() {
     const [sessionActive, setSessionActive] = useState(false);
+    // Titles for the "Previous Class Records"
+    const previousTitles = [
+        "Steps in Videography",
+        "How to Videograph your work",
+        "How to handle your camera",
+    ];
 
+    // Titles for the "Upcoming Sessions"
+    const upcomingSessionsList = [
+        "Mentorship session with Omowunmi Dada",
+        "Practical session in videography",
+        "Practical session in videography",
+        "Practical session in videography",
+    ];
     return (
         <main className="flex-1 mt-3">
 
@@ -16,7 +31,6 @@ function SessionsPage() {
                 <SessionDetails />
             ) : (
                     <>
-                    
 
             {/* Current Session Header */}
             <div className="bg-white shadow-[0px_2px_4px_0px_#00000014] rounded-lg p-4 flex lg:flex-row flex-col items-center justify-between mb-6 border-[0.5px] border-primary">
@@ -64,49 +78,11 @@ function SessionsPage() {
                     {/* Sidebar: Previous Records and Upcoming Sessions */}
                     <div className="lg:col-span-1 space-y-6">
                         {/* Previous Class Records */}
-                        <div className='bg-white p-[10px] rounded-lg'>
-                            <p className="font-medium text-center text-subtext mb-2">Previous Class Records</p>
-                            <div className="space-y-3">
-                                {["Steps in Videography", "How to Videograph your work", "How to handle your camera"].map(
-                                    (title, index) => (
-                                        <div key={index} className="flex items-center justify-between p-[10px] rounded-[10px] bg-white border-[0.5px] border-[#FFC145]">
-                                            <div>
-                                                <p className="text-sm text-text font-medium">
-                                                    {title}
-                                                </p>
-                                                <p className='text-subtext text-sm my-2'>Theory</p>
-                                                <div className="flex gap-2 items-center text-xs text-subtext">
-                                                    <Image src="/dashboard/calendar.svg" width={24} height={24} alt="Calendar" />
-                                                    <span>22/08/2024</span>
-                                                </div>
-                                            </div>
-                                            <button >
-                                                <Image src="/dashboard/play.svg" width={24} height={24} alt="Play" />
-                                            </button>
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                        </div>
+                                <PreviousClassRecords titles={previousTitles} />
 
                         {/* Upcoming Sessions */}
-                        <div className="bg-white p-[18px] rounded-lg">
-                            <p className="font-medium text-center text-subtext mb-2">Upcoming Sessions</p>
-                            <div className="space-y-3">
-                                {["Mentorship session with Omowunmi Dada", "Practical session in videography", "Practical session in videography", "Practical session in videography"].map(
-                                    (title, index) => (
-                                        <div
-                                            key={index}
-                                            className={`flex justify-between rounded-[4px] p-[13px] text-sm rounded-s
-                                            shadow-[0px_4px_4px_0px_#00000014] ${index === 0 ? 'bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB]' : 'bg-white text-text'}`}
-                                        >
-                                            <p className="font-medium max-w-[50%]">{title}</p>
-                                            <p>9AM - 10AM <br /> 22/08/2024</p>
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                        </div>
+                                <UpcomingSessions sessions={upcomingSessionsList} />
+                        
                     </div>
                         </div>
                     </>

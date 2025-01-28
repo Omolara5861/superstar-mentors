@@ -3,6 +3,7 @@ import { useState } from "react";
 import Wrapper from "../../components/mentee-dashboard/wrapper/Wrapper";
 import Calendar from "react-calendar";
 import Image from "next/image";
+import ReusableCalendar from '../../components/dashboard/ReusableCalendar';
 
 function Dashboard() {
     const [upcomingSessions, setUpcomingSessions] = useState([
@@ -22,7 +23,7 @@ function Dashboard() {
             time: "10:00am",
         }
     ]);
-    const [date, setDate] = useState<Date | null>(new Date());
+    const [date, setDate] = useState<Date>(new Date());
     const [events] = useState([
         { title: "Mentorship session with Omowunmi Dada", time: "9AM - 10AM" },
         { title: "Videography lesson", time: "12PM - 2PM" },
@@ -72,10 +73,10 @@ function Dashboard() {
                                     <p className="text-xl text-left text-subtext">Certificates</p>
                                 </div>
                             </div>
-                                <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
-                                    View details
+                            <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
+                                View details
                                 <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
-                                </button>
+                            </button>
                         </div>
 
                         {/* More Certificates */}
@@ -142,50 +143,25 @@ function Dashboard() {
                     <div className="p-6 bg-white rounded-lg shadow-sm">
                         <div className="flex justify-between mb-4">
                             <h3 className="text-lg font-medium text-subtext">Profile Strength</h3>
-                        <button className="text-sm text-subtext border w-[79px] p-1 rounded-2xl h-fit border-primary">Poor</button>
+                            <button className="text-sm text-subtext border w-[79px] p-1 rounded-2xl h-fit border-primary">Poor</button>
                         </div>
-                            <div className="bg-gray-200 rounded-full h-2 w-full">
-                                <div
-                                    className="bg-yellow-400 h-2 rounded-full"
-                                    style={{ width: "30%" }}
-                                ></div>
-                            </div>
+                        <div className="bg-gray-200 rounded-full h-2 w-full">
+                            <div
+                                className="bg-yellow-400 h-2 rounded-full"
+                                style={{ width: "30%" }}
+                            ></div>
+                        </div>
                     </div>
 
                     {/* Calendar Section */}
-                    <div className="p-6 bg-white rounded-lg shadow-md
-                    ">
-                        {/* React Calendar */}
-                        <Calendar
-                            onChange={(value) => setDate(value as Date)}
-                            value={date}
-                            className="border-none text-center rounded-lg"
-                            tileClassName={({ date, view }) =>
-                                view === "month" && date.toDateString() === new Date().toDateString()
-                                    ? "bg-accent text-primary rounded-full text-black"
-                                    : ""
-                            }
-                            nextLabel=">" // Custom right arrow
-                    prevLabel="<" // Custom left arrow
-
+                        <ReusableCalendar
+                            date={date}
+                            setDate={setDate}
+                            events={events}
                         />
-
-                        {/* Event Cards */}
-                        <div className="mt-6 space-y-4">
-                            {events.map((event, index) => (
-                                <div
-                                    key={index}
-                                    className="flex justify-between text-sm rounded-[4px] p-[13px] bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB] rounded-s"
-                                >
-                                    <p className="font-medium max-w-[50%]">{event.title}</p>
-                                        <p>{event.time}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
+        </div>
     );
 }
 

@@ -1,192 +1,185 @@
-"use client";
-import { useState } from "react";
+import React from "react";
 import Wrapper from "../../components/mentor-dashboard/wrapper/Wrapper";
-import Calendar from "react-calendar";
-import Image from "next/image";
+import Card from '../../components/dashboard/SessionCard';
+const Dashboard = () => {
+    // Example session data
+    const sessions = [
+        { part: "Music(Part 1)", time: "Live", mentor: "David" },
+        { part: "Music(Part 2)", time: "10:00AM", mentor: "Sheik" },
+        { part: "Music(Part 3)", time: "02:00PM", mentor: "Petra" },
+        { part: "Music(Part 3)", time: "02:00PM", mentor: "Petra" },
+    ];
 
-function Dashboard() {
-    const [upcomingSessions, setUpcomingSessions] = useState([
-        {
-            mentor: "Omowunmi Dada",
-            date: "22/08/2024",
-            time: "10:00am",
-        },
-        {
-            mentor: "Omowunmi Dada",
-            date: "22/08/2024",
-            time: "10:00am",
-        },
-        {
-            mentor: "Omowunmi Dada",
-            date: "22/08/2024",
-            time: "10:00am",
-        }
-    ]);
-    const [date, setDate] = useState<Date | null>(new Date());
-    const [events] = useState([
-        { title: "Mentorship session with Omowunmi Dada", time: "9AM - 10AM" },
-        { title: "Videography lesson", time: "12PM - 2PM" },
-        { title: "Videography lesson", time: "12PM - 2PM" },
-        { title: "Videography lesson", time: "12PM - 2PM" },
-    ]);
+    // Example avatar sets (adjust as needed)
+    const avatarSets = [
+        [
+            { id: 1, src: "/images/person1.jpg" },
+            { id: 2, src: "/images/person2.jpg" },
+            { id: 3, src: "/images/person3.jpg" },
+        ],
+        [
+            { id: 1, src: "/images/user1.jpg" },
+            { id: 2, src: "/images/user2.jpg" },
+            { id: 3, src: "/images/user3.jpg" },
+        ],
+        [
+            { id: 1, src: "/images/user4.jpg" },
+            { id: 2, src: "/images/user5.jpg" },
+            { id: 3, src: "/images/user6.jpg" },
+        ],
+        [
+            { id: 1, src: "/images/user4.jpg" },
+            { id: 2, src: "/images/user5.jpg" },
+            { id: 3, src: "/images/user6.jpg" },
+        ],
+    ];
 
     return (
-        <div className="p-2 min-h-screen">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Left Section */}
-                <div className="md:col-span-2 space-y-2">
-                    {/* User Information */}
-                    <div className="p-6 bg-tertiary rounded-lg shadow-sm flex justify-between items-center mb-5">
-                        <div className="!text-[#F5F5F5]">
-                            <p className="font-medium">Loveth James! 👋</p>
-                            <p className="text-sm">
-                                You have 4 upcoming sessions
-                            </p>
-                        </div>
-                        <Image src="/dashboard/amico.svg" width={80} height={80} alt="Rolls" />
-                    </div>
+        <div>
+            {/* Header */}
+            <div className="flex justify-between items-center mb-6">
+                <h1 className="text-2xl font-bold">Today&apos;s Session</h1>
+                <button className="px-6 py-2 border border-green-600 text-green-600 rounded hover:bg-green-600 hover:text-white">
+                    Invite Mentees
+                </button>
+            </div>
 
-                    {/* Cards Section */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {/* Enrolled Courses */}
-                        <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
-                            <div className="flex gap-3 pb-2">
-                                <Image src="/dashboard/enroll-course.svg" width={40} height={40} alt="Course" />
-                                <div>
-                                    <h4 className="text-2xl font-bold text-left">0</h4>
-                                    <p className="text-xl text-left text-subtext">Enrolled Course</p>
-                                </div>
-                            </div>
-                            <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
-                                View details
-                                <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
-                            </button>
-                        </div>
-
-                        {/* Certificates */}
-                        <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
-                            <div className="flex gap-3 pb-2">
-                                <Image src="/dashboard/certificate.svg" width={40} height={40} alt="Course" />
-                                <div>
-                                    <h4 className="text-2xl font-bold text-left">0</h4>
-                                    <p className="text-xl text-left text-subtext">Certificates</p>
-                                </div>
-                            </div>
-                                <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
-                                    View details
-                                <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
-                                </button>
-                        </div>
-
-                        {/* More Certificates */}
-                        <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
-                            <div className="flex gap-3 pb-2">
-                                <Image src="/dashboard/certificates.svg" width={40} height={40} alt="Course" />
-                                <div>
-                                    <h4 className="text-2xl font-bold text-left">0</h4>
-                                    <p className="text-xl text-left text-subtext">Certificates</p>
-                                </div>
-                            </div>
-                            <button className="text-subtext font-medium mt-2 flex justify-between border-t-[0.5px] border-t-subtext pt-5 w-full">
-                                View details
-                                <Image src="/dashboard/arrow-right.svg" width={28} height={24} alt="Course" />
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Recent Sessions */}
-                    <div>
-                        <h3 className="text-xl font-medium mt-6 mb-4 text-subtext">Recent Sessions</h3>
-                        {upcomingSessions.map((session, index) => (
-                            <div
-                                key={index}
-                                className={`flex flex-col md:flex-row justify-between bg-[#FFFEFE] p-5 rounded-lg shadow-md mb-4 ${index === 0 ? 'border-[0.5px] border-primary' : ''
-                                    }`}
-                            >
-                                <div className="flex flex-col md:flex-row gap-3 md:w-2/5">
-                                    <Image src="/dashboard/ellipse.svg" width={50} height={50} alt="Profile" className="h-fit" />
-                                    <div>
-                                        <p className="text-subtext mb-0">
-                                            Upcoming mentorship session with{" "}
-                                        </p>
-                                        <p className="text-text text-sm mb-2">{session.mentor}</p>
-                                        <div className="flex gap-4 text-sm text-gray-600">
-                                            <div className="flex gap-2">
-                                                <Image src="/dashboard/calendar.svg" width={24} height={24} alt="Calendar" />
-                                                <span>{session.date}</span>
-                                            </div>
-                                            <div className="flex gap-2">
-                                                <Image src="/dashboard/clock.svg" width={24} height={24} alt="Clock" />
-                                                <span>{session.time}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full md:w-2/5 self-center mt-4 md:mt-0">
-                                    <button className="bg-primary text-white h-[54px] rounded-md w-full md:w-1/2">
-                                        Join session
-                                    </button>
-                                    <button className="border border-primary text-primary h-[54px] rounded-md hover:bg-green-100 w-full md:w-1/2">
-                                        Message
-                                    </button>
-                                </div>
-                            </div>
-
-                        ))}
-
-                    </div>
-                </div>
-                {/* Right Section (Calendar & Profile Strength) */}
-                <div className="space-y-6">
-                    {/* Profile Strength */}
-                    <div className="p-6 bg-white rounded-lg shadow-sm">
-                        <div className="flex justify-between mb-4">
-                            <h3 className="text-lg font-medium text-subtext">Profile Strength</h3>
-                        <button className="text-sm text-subtext border w-[79px] p-1 rounded-2xl h-fit border-primary">Poor</button>
-                        </div>
-                            <div className="bg-gray-200 rounded-full h-2 w-full">
-                                <div
-                                    className="bg-yellow-400 h-2 rounded-full"
-                                    style={{ width: "30%" }}
-                                ></div>
-                            </div>
-                    </div>
-
-                    {/* Calendar Section */}
-                    <div className="p-6 bg-white rounded-lg shadow-md
-                    ">
-                        {/* React Calendar */}
-                        <Calendar
-                            onChange={(value) => setDate(value as Date)}
-                            value={date}
-                            className="border-none text-center rounded-lg"
-                            tileClassName={({ date, view }) =>
-                                view === "month" && date.toDateString() === new Date().toDateString()
-                                    ? "bg-accent text-primary rounded-full text-black"
-                                    : ""
-                            }
-                            nextLabel=">" // Custom right arrow
-                    prevLabel="<" // Custom left arrow
-
+            {/* Today's Session Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-6">
+                {sessions.map((session, index) => {
+                    const isLive = session.time === "Live";
+                    return (
+                        <Card
+                            key={index}
+                            // Extract "Music" from "Music(Part x)" if you want separate title/subtitle
+                            title="Music"
+                            subtitle={session.part.replace("Music", "")}
+                            isLive={isLive}
+                            time={!isLive ? session.time : undefined}
+                            filesCount={0}
+                            mentorName={session.mentor}
+                            mentorImage={`/images/${session.mentor.toLowerCase()}.jpg`}
+                            avatars={avatarSets[index]} // optional
                         />
+                    );
+                })}
+            </div>
 
-                        {/* Event Cards */}
-                        <div className="mt-6 space-y-4">
-                            {events.map((event, index) => (
-                                <div
-                                    key={index}
-                                    className="flex justify-between text-sm rounded-[4px] p-[13px] bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB] rounded-s"
-                                >
-                                    <p className="font-medium max-w-[50%]">{event.title}</p>
-                                        <p>{event.time}</p>
-                                </div>
+            {/* Assignment Submitted */}
+            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h2 className="text-lg font-bold mb-4">Assignment Submitted</h2>
+                <table className="w-full border-collapse">
+                    <thead>
+                        <tr className="border-b">
+                            {["STUDENT ID", "DATE OF SUBMISSION", "STATUS", "SCORES", "DOWNLOAD"].map((head, index) => (
+                                <th key={index} className="text-left text-gray-600 font-semibold py-2">{head}</th>
                             ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {[
+                            { name: "Damilola Joseph", date: "22/10/2024", status: "Completed", score: "70/100" },
+                            { name: "Damilola Joseph", date: "22/10/2024", status: "Incomplete", score: "0" },
+                            { name: "Damilola Joseph", date: "22/10/2024", status: "Pending", score: "-" },
+                            { name: "Damilola Joseph", date: "22/10/2024", status: "Completed", score: "70/100" },
+                        ].map((row, index) => (
+                            <tr key={index} className="border-b">
+                                <td className="py-3">{row.name}</td>
+                                <td>{row.date}</td>
+                                <td className={row.status === "Completed" ? "text-green-600" : row.status === "Incomplete" ? "text-red-600" : "text-yellow-500"}>
+                                    {row.status}
+                                </td>
+                                <td>{row.score}</td>
+                                <td>
+                                    Download
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Messages */}
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h2 className="text-lg font-bold mb-4">Messages</h2>
+                    {[
+                        { mentee: "Mentee 1", message: "Hi, submit your assignment on Monday" },
+                        { mentee: "Mentee 2", message: "Hi, submit your assignment on Monday" },
+                        { mentee: "Mentee 5", message: "Hi, submit your assignment on Monday" },
+                    ].map((msg, index) => (
+                        <div key={index} className="mb-4 border-b pb-2">
+                            <h4 className="font-bold">{msg.mentee}</h4>
+                            <p className="text-sm text-gray-600">{msg.message}</p>
                         </div>
-                    </div>
+                    ))}
                 </div>
+
+                {/* Attendance */}
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h2 className="text-lg font-bold mb-4">Attendance</h2>
+                    <p className="text-sm mb-2">
+                        <strong>On Time(0)</strong> <strong>Late(0)</strong> <strong>Absent(0)</strong>
+                    </p>
+                    <a href="#" className="text-green-600 text-sm mb-4 block hover:underline">View All Students</a>
+                    {[
+                        { mentee: "Mentee 3", course: "Videography", status: "On time", color: "text-green-500" },
+                        { mentee: "Mentee 2", course: "Skit-makers", status: "On time", color: "text-green-500" },
+                        { mentee: "Mentee 5", course: "Choreograph", status: "On time", color: "text-green-500" },
+                        { mentee: "Mentee 1", course: "Dancer", status: "Absent", color: "text-red-500" },
+                        { mentee: "Mentee 4", course: "Producer", status: "Absent", color: "text-red-500" },
+                    ].map((att, index) => (
+                        <div key={index} className="flex items-center mb-3">
+                            <div className="w-10 h-10 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <h4 className="font-bold">{att.mentee}</h4>
+                                <p className="text-sm text-gray-600">
+                                    {att.course} <span className={att.color}>• {att.status}</span>
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            {/* My E-books & My Documents */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h2 className="text-lg font-bold mb-4">My E-books</h2>
+                    {[
+                        { title: "Get inspired with doing things", author: "FordWells" },
+                        { title: "Big Hands", author: "JerrySmith" },
+                    ].map((ebook, index) => (
+                        <div key={index} className="flex justify-between items-center border-b pb-3 mb-3">
+                            <div>
+                                <h4 className="font-bold">{ebook.title}</h4>
+                                <p className="text-sm text-gray-600">By {ebook.author}</p>
+                            </div>
+                            <button className="text-gray-600">...</button>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h2 className="text-lg font-bold mb-4">My Documents</h2>
+                    {[
+                        { name: "Cohort 1", desc: "Music Students" },
+                        { name: "Fees Payment List", desc: "Music Students" },
+                    ].map((doc, index) => (
+                        <div key={index} className="flex justify-between items-center border-b pb-3 mb-3">
+                            <div>
+                                <h4 className="font-bold flex items-center">
+                                    Folder {doc.name}
+                                </h4>
+                                <p className="text-sm text-gray-600">{doc.desc}</p>
+                            </div>
+                            <button className="text-gray-600">...</button>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
     );
-}
+};
 
 export default Wrapper(Dashboard);
