@@ -1,8 +1,8 @@
-import MessagesPage from '../../../pages/mentee-dashboard/messages/Messages';
-export default function About() {
+import Meeting from '../../../pages/mentor-dashboard/meetings/Meetings';
+export default function MeetingsPage() {
     return (
         <>
-            <MessagesPage />
+            <Meeting />
         </>
     );
 }

@@ -1,8 +1,8 @@
-import SessionsPage from '../../../pages/mentee-dashboard/sessions/Sessions';
-export default function About() {
+import Sessions from '../../../pages/mentor-dashboard/sessions/Sessions';
+export default function SessionsPage() {
     return (
         <>
-            <SessionsPage />
+            <Sessions />
         </>
     );
 }

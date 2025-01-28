@@ -1,8 +1,8 @@
-import AssignmentsPage from '../../../pages/mentee-dashboard/assignments/Assignments';
-export default function About() {
+import Archive from '../../../pages/mentor-dashboard/archive/Messages';
+export default function ArchivePage() {
     return (
         <>
-            <AssignmentsPage />
+            <Archive />
         </>
     );
 }

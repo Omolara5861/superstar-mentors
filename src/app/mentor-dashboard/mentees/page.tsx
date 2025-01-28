@@ -1,8 +1,9 @@
-import CoursesPage from '../../../pages/mentee-dashboard/courses/Courses';
-export default function Courses() {
+import Mentees from "../../../pages/mentor-dashboard/mentees/Mentees";
+
+export default function MenteesPage() {
     return (
         <>
-            <CoursesPage />
+            <Mentees />
         </>
     );
 }

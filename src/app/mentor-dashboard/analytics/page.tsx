@@ -1,8 +1,8 @@
-import AssignmentsPage from '../../../pages/mentee-dashboard/assignments/Assignments';
-export default function About() {
+import Analytics from '../../../pages/mentor-dashboard/analytics/Analytics';
+export default function AnalyticsPage() {
     return (
         <>
-            <AssignmentsPage />
+            <Analytics />
         </>
     );
 }
