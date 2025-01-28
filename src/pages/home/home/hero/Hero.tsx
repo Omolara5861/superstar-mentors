@@ -15,8 +15,8 @@ const HeroSection = () => {
                         By mastering a new skill, kickstart a project, secure your ideal career.
                     </p>
                     <div className="flex flex-col justify-center lg:flex-row lg:justify-start lg:space-x-4">
-                        <Button href='/join' width='168px' btnText=' Join as a Mentee' />
-                        <Link href='/mentor'>
+                        <Button href='/signup' width='168px' btnText=' Join as a Mentee' />
+                        <Link href='/signup'>
                             <button className="lg:mt-0 mt-3 inline-block bg-transparent hover:bg-secondary hover:border-none font-medium w-[168px] py-3 px-4 rounded-lg text-primary border-2 border-primary">
                                 Mentor
                             </button>

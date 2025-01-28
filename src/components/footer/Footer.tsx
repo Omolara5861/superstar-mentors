@@ -22,8 +22,8 @@ const Footer = () => {
                             <ul className="space-y-4 text-sm">
                                 <li><Link href="#">Browse Mentor</Link></li>
                                 <li><Link href="#">Book A Session</Link></li>
-                                <li><Link href="#">Become A Mentor</Link></li>
-                                <li><Link href="#">Testimonials</Link></li>
+                                <li><Link href="/signup">Become A Mentor</Link></li>
+                                <li><Link href="/#testimonials">Testimonials</Link></li>
                             </ul>
                         </div>
                         <div className="w-1/2 md:w-1/4 mb-8 md:mb-0">
@@ -36,16 +36,16 @@ const Footer = () => {
                         <div className="w-1/2 md:w-1/4 mb-8 md:mb-0">
                             <h5 className="text-lg font-semibold mb-9">COMPANY</h5>
                             <ul className="space-y-4 text-sm">
-                                <li><Link href="#">About Us</Link></li>
+                                <li><Link href="/about">About Us</Link></li>
                                 <li><Link href="#">Privacy Policy</Link></li>
                                 <li><Link href="#">Terms Of Services</Link></li>
-                                <li><Link href="#">FAQ</Link></li>
+                                <li><Link href="/#faqs">FAQ</Link></li>
                             </ul>
                         </div>
                         <div className="w-1/2 md:w-1/4">
                             <h5 className="text-lg font-semibold mb-9">SUPPORT</h5>
                             <ul className="space-y-4 text-sm">
-                                <li><Link href="#">Contact Us</Link></li>
+                                <li><Link href="/contact">Contact Us</Link></li>
                                 <li><Link href="#">Office Address</Link></li>
                             </ul>
                         </div>
@@ -54,7 +54,7 @@ const Footer = () => {
 
                 {/* Social Media and Copyright */}
                 <div className="flex flex-col lg:flex-row justify-between items-center mt-11 border-t border-[#FEFEFF] pt-4">
-                    <span className="text-sm">© 2024 — Digital Careers Academy</span>
+                    <span className="text-sm">© 2024 — <Link href='https://digitalcareers.academy'>Digital Careers Academy</Link></span>
                     <div className="flex space-x-4 mt-4 lg:mt-0">
                         {/* Replace `#` with actual social media links */}
                         <Link href="#" target='_blank'><Image width={35} height={35} src="/icons/twitter.svg" alt="Twitter" /></Link>

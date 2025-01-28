@@ -82,7 +82,7 @@ const MentorshipDetails = () => {
                     </ul>
                     {/* Call to Action Button */}
                     <div className="mt-8">
-                        <Button href='' width='168px' btnText='Join as a Mentee' />
+                        <Button href='/signup' width='168px' btnText='Join as a Mentee' />
                     </div>
                 </div>
             </div>
