@@ -2,20 +2,25 @@ import React from "react";
 
 interface UpcomingSessionsProps {
     sessions: string[];
+    bg: string;
 }
 
-const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({ sessions }) => {
+const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({ sessions, bg }) => {
     return (
-        <div className="bg-white p-[18px] rounded-lg">
+        <div className={`p-[10px] rounded-lg ${bg}`}>
             <p className="font-medium text-center text-subtext mb-2">Upcoming Sessions</p>
             <div className="space-y-3">
                 {sessions.map((title, index) => (
                     <div
-                        key={index}
-                        className={`flex justify-between rounded-[4px] p-[13px] text-sm rounded-s
-              shadow-[0px_4px_4px_0px_#00000014] ${index === 0
+                    key={index}
+                        style={{
+                            borderImageSource: 'linear-gradient(90deg, #205924 0%, #FFC145 100%)',
+                            borderImageSlice: 1,
+                        }}
+                        className={`rounded flex justify-between p-[13px] text-sm
+              shadow-[0px_4px_4px_0px_#00000014] border border-transparent ${index === 0
                                 ? "bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB]"
-                                : "bg-white text-text"
+                                : " text-text"
                             }`}
                     >
                         <p className="font-medium max-w-[50%]">{title}</p>

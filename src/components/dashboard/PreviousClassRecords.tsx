@@ -3,17 +3,18 @@ import Image from "next/image";
 
 interface PreviousClassRecordsProps {
     titles: string[];
+    bg: string;
 }
 
-const PreviousClassRecords: React.FC<PreviousClassRecordsProps> = ({ titles }) => {
+const PreviousClassRecords: React.FC<PreviousClassRecordsProps> = ({ titles, bg }) => {
     return (
-        <div className="bg-white p-[10px] rounded-lg">
+        <div className={` p-[10px] rounded-lg ${bg}`}>
             <p className="font-medium text-center text-subtext mb-2">Previous Class Records</p>
             <div className="space-y-3">
                 {titles.map((title, index) => (
                     <div
                         key={index}
-                        className="flex items-center justify-between p-[10px] rounded-[10px] bg-white border-[0.5px] border-[#FFC145]"
+                        className="flex items-center justify-between p-[10px] rounded-[10px] border-[0.5px] border-[#FFC145]"
                     >
                         <div>
                             <p className="text-sm text-text font-medium">{title}</p>

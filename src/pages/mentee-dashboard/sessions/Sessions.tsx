@@ -78,10 +78,10 @@ function SessionsPage() {
                     {/* Sidebar: Previous Records and Upcoming Sessions */}
                     <div className="lg:col-span-1 space-y-6">
                         {/* Previous Class Records */}
-                                <PreviousClassRecords titles={previousTitles} />
+                                <PreviousClassRecords titles={previousTitles} bg='bg-white' />
 
                         {/* Upcoming Sessions */}
-                                <UpcomingSessions sessions={upcomingSessionsList} />
+                                <UpcomingSessions sessions={upcomingSessionsList} bg='bg-white' />
                         
                     </div>
                         </div>
