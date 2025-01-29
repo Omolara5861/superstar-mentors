@@ -1,8 +1,18 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Wrapper from "../../../components/mentor-dashboard/wrapper/Wrapper";
+import ReusableCalendar from "../../../components/dashboard/ReusableCalendar";
 
 const Analytics = () => {
+    const [date, setDate] = useState<Date>(new Date());
+
+     const [events] = useState([
+            { title: "Mentorship session with Omowunmi Dada", time: "9AM - 10AM" },
+            { title: "Videography lesson", time: "12PM - 2PM" },
+            { title: "Videography lesson", time: "12PM - 2PM" },
+            { title: "Videography lesson", time: "12PM - 2PM" },
+        ]);
     const mentees = [
         { name: "Ford Wells", email: "ford@gmail.com", lessons: 0, course: "Photography", mentor: "Mentor 1" },
         { name: "Ford Wells", email: "ford@gmail.com", lessons: 0, course: "Photography", mentor: "Mentor 1" },
@@ -16,7 +26,7 @@ const Analytics = () => {
     ];
 
     return (
-        <div className="p-6 bg-gray-100 min-h-screen grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Left Section: Mentees List */}
             <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
                 <h2 className="text-lg font-bold mb-4">Mentees List</h2>
@@ -58,38 +68,11 @@ const Analytics = () => {
             </div>
 
             {/* Right Section: Calendar */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-lg font-bold mb-4 text-center">September 2021</h2>
-                <div className="grid grid-cols-7 gap-2 text-center text-gray-600 text-sm mb-4">
-                    {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day, index) => (
-                        <div key={index} className="font-semibold">{day}</div>
-                    ))}
-                    {Array.from({ length: 30 }, (_, i) => i + 1).map((day) => (
-                        <div
-                            key={day}
-                            className={`p-2 rounded-md cursor-pointer ${day === 19 ? "bg-green-600 text-white font-bold" : "hover:bg-gray-200"
-                                }`}
-                        >
-                            {day}
-                        </div>
-                    ))}
-                </div>
-
-                {/* Upcoming Sessions */}
-                <div className="mt-4">
-                    {Array(5)
-                        .fill("Videography lesson")
-                        .map((lesson, index) => (
-                            <div
-                                key={index}
-                                className="bg-gradient-to-r from-green-700 to-yellow-500 text-white p-2 rounded-md text-sm mb-2"
-                            >
-                                {lesson} <span className="float-right">12PM - 2PM</span>
-                            </div>
-                        ))}
-                </div>
-            </div>
-
+                <ReusableCalendar
+                    date={date}
+                    setDate={setDate}
+                    events={events}
+                />
             {/* Performance Section */}
             <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
                 <h2 className="text-lg font-bold mb-4">Mentees Performance Details</h2>

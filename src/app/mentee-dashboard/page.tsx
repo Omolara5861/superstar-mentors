@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Wrapper from "../../components/mentee-dashboard/wrapper/Wrapper";
-import Calendar from "react-calendar";
 import Image from "next/image";
 import ReusableCalendar from '../../components/dashboard/ReusableCalendar';
 
