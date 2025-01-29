@@ -21,7 +21,7 @@ function Table<T extends Record<string, any>>({ data, columns }: TableProps<T>) 
                         {columns.map((column, index) => (
                             <th
                                 key={index}
-                                className="text-left font-bold text-xl px-6 py-3 text-primary uppercase"
+                                className="border-b border-gray-400 text-left font-bold text-xl px-6 py-4 text-primary uppercase"
                             >
                                 {column.header}
                             </th>
