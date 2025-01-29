@@ -89,7 +89,7 @@ const paginate = (data: any, currentPage: any, itemsPerPage: any) => {
     return data.slice(startIndex, endIndex);
 };
 
-const AssignmentsPage = () => {
+const MenteesPage = () => {
     const itemsPerPage = 10;
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -111,29 +111,10 @@ const AssignmentsPage = () => {
     const columns = [
         { header: "NAMES", accessor: "name" },
         { header: "COURSE ENROLLED", accessor: "courseEnrolled" },
-        { header: "MODE OF TEACHING", accessor: "startDate" },
-        { header: "GENDER", accessor: "startDate" },
+        { header: "MODE OF TEACHING", accessor: "modeOfTeaching" },
+        { header: "GENDER", accessor: "gender" },
         { header: "Start Date", accessor: "startDate" },
         { header: "End Date", accessor: "endDate" },
-        {
-            render: (value: any, row: any) => {
-                let textColor, icon;
-                switch (value) {
-                    case "Completed":
-                        textColor = "text-green-500";
-                        icon = "/dashboard/online.svg";
-                        break;
-                    case "Pending":
-                        textColor = "text-yellow-500";
-                        icon = "/dashboard/pending.svg";
-                        break;
-                    case "Grading":
-                        textColor = "text-blue-500";
-                        icon = "/dashboard/online.svg";
-                        break;
-                }
-            }
-        }
     ];
 
 
@@ -197,4 +178,4 @@ const AssignmentsPage = () => {
     );
 };
 
-export default Wrapper(AssignmentsPage);
+export default Wrapper(MenteesPage);
