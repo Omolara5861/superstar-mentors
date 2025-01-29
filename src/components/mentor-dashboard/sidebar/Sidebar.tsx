@@ -47,6 +47,7 @@ const Sidebar = () => {
         { href: '/mentor-dashboard/sessions', src: '/dashboard/session.svg', alt: 'Sessions Icon', text: 'Sessions' },
         { href: '/mentor-dashboard/meetings', src: '/dashboard/courses.svg', alt: 'Courses Icon', text: 'Meetings' },
         { href: '/mentor-dashboard/mentees', src: '/dashboard/mentees.svg', alt: 'Assignment Icon', text: 'Mentees' },
+        { href: '/mentor-dashboard/assignments', src: '/dashboard/assignment.svg', alt: 'File Icon', text: 'Assignments' },
         { href: '/mentor-dashboard/archive', src: '/dashboard/archive.svg', alt: 'File Icon', text: 'Archive' },
         { href: '/mentor-dashboard/analytics', src: '/dashboard/analysis.svg', alt: 'Analysis Icon', text: 'Analytics' },
         { href: '/mentor-dashboard/settings', src: '/dashboard/settings.svg', alt: 'Settings Icon', text: 'Settings' },
