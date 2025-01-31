@@ -9,6 +9,7 @@ type UploadModalProps = {
 
 const UploadModal: React.FC<UploadModalProps> = ({ onClose, onSuccess, onError }) => {
     const [file, setFile] = useState<File | null>(null);
+    const [url, setUrl] = useState('');
 
     const handleFileUpload = () => {
         if (file) {
@@ -46,6 +47,13 @@ const UploadModal: React.FC<UploadModalProps> = ({ onClose, onSuccess, onError }
                         className="hidden"
                         id="file-upload"
                         onChange={(e) => setFile(e.target.files?.[0] || null)}
+                    />
+                    <input
+                        type="text"
+                        className="w-full h-[57px] p-3 border border-gray-300 bg-transparent rounded-md text-subtext"
+                        value={url}
+                        id="url-upload"
+                        onChange={(e) => setUrl(e.target.value)}
                     />
                     <p className="text-[#030F2D] text-sm mt-2">Format: Doc, PDF, JPG</p>
                     <label
