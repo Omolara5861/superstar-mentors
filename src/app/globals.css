@@ -97,7 +97,7 @@ h3 {
 .mentee:hover p:first-child {
   color: #01100A;
 }
-.mentee:hover p:last-child {
+.mentee:hover p:last-child, .mentee:hover p.cont {
   color: #006A50;
 }
 

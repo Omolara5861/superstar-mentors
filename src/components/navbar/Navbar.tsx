@@ -7,6 +7,21 @@ const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    const categories = [
+        'Music',
+        'Performance Art',
+        'Makeup Artist',
+        'Comedy',
+        'Producer',
+        'Theatre',
+        'Skit Makers',
+        'Choreographer',
+        'Cinematography',
+        'Actors',
+        'Film Director',
+        'Photography',
+    ];
+
     return (
         <nav className="bg-white shadow-md text-subtext sticky top-0 z-50">
             <div className="container mx-auto px-4 py-[16px] flex items-center justify-between">
@@ -34,18 +49,11 @@ const Navbar = () => {
                         {dropdownOpen && (
                             <div className="absolute left-0 w-[537px] mt-2 bg-white text-text rounded-xl shadow-lg z-10">
                                 <div className="grid grid-cols-3 gap-4 pt-4 pb-6 px-6 text-sm">
-                                    <span>Music</span>
-                                    <span>Performance Art</span>
-                                    <span>Makeup Artist</span>
-                                    <span>Comedy</span>
-                                    <span>Producer</span>
-                                    <span>Theatre</span>
-                                    <span>Skit Makers</span>
-                                    <span>Choreographer</span>
-                                    <span>Cinematography</span>
-                                    <span>Actors</span>
-                                    <span>Film Director</span>
-                                    <span>Photography</span>
+                                    {categories.map((cat, index) => (
+                                        <Link key={index} href={`/mentors?category=${encodeURIComponent(cat)}`} className="hover:text-blue-500" >
+                                            {cat}
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
                         )}

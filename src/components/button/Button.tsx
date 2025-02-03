@@ -4,16 +4,17 @@ interface ButtonProps {
     btnText: React.ReactNode
     href: string;
     width?: string;
+    classnames?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ btnText, href, width }) => {
+const Button: React.FC<ButtonProps> = ({ btnText, href, width, classnames }) => {
     return (
         <Link
             href={href}
         >
             <button
                 style={{ width: width || 'auto' }}
-                className="inline-block bg-primary hover:bg-[#002C1C] !w-auto py-3 px-4 rounded-lg text-white font-medium">
+                className={`inline-block bg-primary hover:bg-[#002C1C] !w-auto py-3 px-4 rounded-lg text-white font-medium ${classnames}`}>
                 {btnText}
             </button>
         </Link>
