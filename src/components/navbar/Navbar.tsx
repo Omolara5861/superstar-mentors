@@ -8,7 +8,7 @@ const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-white shadow-md text-subtext">
+        <nav className="bg-white shadow-md text-subtext sticky top-0 z-50">
             <div className="container mx-auto px-4 py-[16px] flex items-center justify-between">
                 {/* Logo */}
                 {/* Desktop Menu */}

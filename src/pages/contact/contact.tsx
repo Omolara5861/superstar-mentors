@@ -52,16 +52,16 @@ const ContactPage = () => {
             <div>
                 <div className="container mx-auto text-center rounded-2xl p-5 lg:w-[660px] border-[1.5px] border-[#E1E0E0]">
                     {/* Contact Info */}
-                    <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-x-12 mb-8 text-subtext">
-                        <div className="flex items-center space-x-2">
+                    <div className="flex justify-center gap-6 mb-5 flex-col md:flex-row items-center text-subtext">
+                        <div className="flex gap-2">
                             <Image src='/contact/pin.svg' alt='Location icon' width={24} height={24} />
                             <span>Location</span>
                         </div>
-                        <div className="flex items-center space-x-2">
+                        <div className="flex gap-2">
                             <Image src='/contact/call.svg' alt='Location icon' width={24} height={24} />
                             <span>Call</span>
                         </div>
-                        <div className="flex items-center space-x-2">
+                        <div className="flex gap-2">
                             <Image src='/contact/mail.svg' alt='Location icon' width={24} height={24} />
                             <span>example@gmail.com</span>
                         </div>
