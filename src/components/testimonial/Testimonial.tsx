@@ -98,7 +98,7 @@ const TestimonialCarousel = () => {
     };
 
     return (
-        <section className="bg-background my-12 pt-[53px] pb-[171px]">
+        <section className="bg-background my-12 pt-[53px] pb-[171px]" id='testimonials'>
             <div className="container mx-auto px-4">
                 {/* Title */}
                 <h2 className=" text-center mb-12">

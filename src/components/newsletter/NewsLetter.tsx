@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 function NewsLetter() {
   return (
-    <div className="flex flex-col items-center pt-5 pb-2 leading-snug bg-background text-subtext">
+    <div className="flex flex-col items-center pt-5 pb-2 leading-snug bg-background text-subtext" id="newsletter">
       <div className="flex flex-col text-center">
         <h2>
           Join Our Newsletter

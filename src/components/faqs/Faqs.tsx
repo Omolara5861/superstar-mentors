@@ -34,7 +34,7 @@ const FAQAccordion = () => {
     };
 
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-16" id='faqs'>
             <Image
                 alt="Decoration Image 2"
                 width={1440}

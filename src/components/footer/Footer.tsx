@@ -20,17 +20,17 @@ const Footer = () => {
                         <div className="w-1/2 md:w-1/4 mb-8 md:mb-0">
                             <h5 className="text-lg font-semibold mb-9">SERVICES</h5>
                             <ul className="space-y-4 text-sm">
-                                <li><Link href="#">Browse Mentor</Link></li>
-                                <li><Link href="#">Book A Session</Link></li>
+                                <li><Link href="/mentors">Browse Mentor</Link></li>
+                                <li><Link href="">Book A Session</Link></li>
                                 <li><Link href="/signup">Become A Mentor</Link></li>
-                                <li><Link href="/#testimonials">Testimonials</Link></li>
                             </ul>
                         </div>
                         <div className="w-1/2 md:w-1/4 mb-8 md:mb-0">
                             <h5 className="text-lg font-semibold mb-9">RESOURCES</h5>
                             <ul className="space-y-4 text-sm">
-                                <li><Link href="#">Newsletter</Link></li>
+                                <li><Link href="/#newsletter">Newsletter</Link></li>
                                 <li><Link href="#">Blog</Link></li>
+                                <li><Link href="/#testimonials">Testimonials</Link></li>
                             </ul>
                         </div>
                         <div className="w-1/2 md:w-1/4 mb-8 md:mb-0">
@@ -39,13 +39,13 @@ const Footer = () => {
                                 <li><Link href="/about">About Us</Link></li>
                                 <li><Link href="#">Privacy Policy</Link></li>
                                 <li><Link href="#">Terms Of Services</Link></li>
-                                <li><Link href="/#faqs">FAQ</Link></li>
                             </ul>
                         </div>
                         <div className="w-1/2 md:w-1/4">
                             <h5 className="text-lg font-semibold mb-9">SUPPORT</h5>
                             <ul className="space-y-4 text-sm">
                                 <li><Link href="/contact">Contact Us</Link></li>
+                                <li><Link href="/#faqs">FAQ</Link></li>
                                 <li><Link href="#">Office Address</Link></li>
                             </ul>
                         </div>
