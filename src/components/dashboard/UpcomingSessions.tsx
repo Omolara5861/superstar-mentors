@@ -14,12 +14,12 @@ const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({ sessions, bg }) => 
                     <div
                     key={index}
                         style={{
-                            borderImageSource: 'linear-gradient(90deg, #205924 0%, #FFC145 100%)',
+                            borderImageSource: 'linear-gradient(90deg, #042AA2 0%, #CC8A06 100%)',
                             borderImageSlice: 1,
                         }}
                         className={`rounded flex justify-between p-[13px] text-sm
               shadow-[0px_4px_4px_0px_#00000014] border border-transparent ${index === 0
-                                ? "bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB]"
+                            ? "bg-gradient-to-r from-[#042AA2] to-[#CC8A06] text-[#F1FFFB]"
                                 : " text-text"
                             }`}
                     >

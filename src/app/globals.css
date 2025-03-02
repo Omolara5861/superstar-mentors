@@ -101,7 +101,7 @@ h3 {
 
 .mentee:hover p:last-child,
 .mentee:hover p.cont {
-  color: #006A50;
+  color: #0A39CF;
 }
 
 .testimonial-shadow {
@@ -148,7 +148,7 @@ h3 {
 }
 
 .react-calendar {
-  color: #006A50;
+  color: #0A39CF;
   font-weight: 600;
 }
 
@@ -191,7 +191,7 @@ abbr:where([title]) {
 .link:hover,
 .active {
   border-right: 3px solid var(--Accent, #FFC145);
-  background: #066921;
+  background: #0A39CF;
   color: #fff;
 }
 

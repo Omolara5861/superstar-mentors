@@ -51,7 +51,7 @@ function Dashboard() {
                         {/* Enrolled Courses */}
                         <div className="bg-white p-[14px] rounded-lg shadow-md border border-[#F5F5F5] text-center">
                             <div className="flex gap-3 pb-2">
-                                <Image src="/dashboard/enroll-course.svg" width={40} height={40} alt="Course" />
+                                <Image src="/dashboard/enroll course.svg" width={40} height={40} alt="Course" />
                                 <div>
                                     <h4 className="text-2xl font-bold text-left">0</h4>
                                     <p className="text-xl text-left text-subtext">Enrolled Course</p>

@@ -36,7 +36,7 @@ const ReusableCalendar: React.FC<ReusableCalendarProps> = ({ date, setDate, even
                     {events.map((event, index) => (
                         <div
                             key={index}
-                            className="flex justify-between text-sm rounded-[4px] p-[13px] bg-gradient-to-r from-[#006A50] to-[#FFC145] text-[#F1FFFB] rounded-s"
+                            className="flex justify-between text-sm rounded-[4px] p-[13px] bg-gradient-to-r from-[#042AA2] to-[#CC8A06] text-[#F1FFFB] rounded-s"
                         >
                             <p className="font-medium max-w-[50%]">{event.title}</p>
                             <p>{event.time}</p>

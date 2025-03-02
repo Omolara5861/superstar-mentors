@@ -64,7 +64,7 @@ const Sidebar = () => {
                         {links.map(link => (
                             <li className="mb-4" key={link.href}>
                                 <Link
-                                    className={`flex p-2 rounded items-center text-[#205924] link ${pathname === link.href ? 'active' : ''
+                                    className={`flex p-2 rounded items-center text-[#0A39CF] link ${pathname === link.href ? 'active' : ''
                                         }`}
                                     href={link.href}
                                 >
