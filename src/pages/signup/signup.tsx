@@ -32,11 +32,12 @@ const SignUpPage = () => {
         <div className="text-center">
           <div className="bg-white p-4 rounded-lg shadow-md">
             <Image
-              src="/f-logo.png"
-              alt="Logo"
-              width={120}
-              height={40}
-            />
+                                       src='/logo.svg'
+                                       alt="Logo"
+                                       width={63}
+                                       height={63}
+                                       className="object-cover"
+                                   />
           </div>
         </div>
       </div>

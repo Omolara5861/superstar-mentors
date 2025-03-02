@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
     return (
-        <section className="bg-[#F1FFFB] pt-16">
+        <section className="bg-[#F1FCFF] pt-16">
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
                 {/* Text Area */}
                 <div className="lg:w-1/2 w-full mb-8 lg:mb-0 lg:pr-12 text-center lg:text-left text-text">
@@ -17,7 +17,7 @@ const HeroSection = () => {
                     <div className="flex flex-col justify-center lg:flex-row lg:justify-start lg:space-x-4">
                         <Button href='/signup' width='168px' btnText=' Join as a Mentee' />
                         <Link href='/signup'>
-                            <button className="lg:mt-0 mt-3 inline-block bg-transparent hover:bg-secondary hover:border-none font-medium w-[168px] py-3 px-4 rounded-lg text-primary border-2 border-primary">
+                            <button className="lg:mt-0 mt-3 inline-block bg-transparent hover:border-none font-medium w-[168px] py-3 px-4 rounded-lg text-primary border-2 border-primary">
                                 Mentor
                             </button>
                         </Link>

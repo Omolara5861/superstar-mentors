@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Button from '../button/Button';
+import Image from 'next/image';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -29,10 +30,13 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8 items-center">
                     <Link href='/'>
-                        <div className="flex items-center mr-12">
-                            <div className="bg-black rounded-full w-8 h-8"></div>
-                            <span className="ml-2 text-lg font-bold">LOGO</span>
-                        </div>
+                        <Image
+                            src='/logo.svg'
+                            alt="Logo"
+                            width={63}
+                            height={63}
+                            className="object-cover"
+                        />
                     </Link>
                     <div className="relative">
                         <button

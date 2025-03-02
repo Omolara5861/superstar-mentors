@@ -32,26 +32,26 @@ h2 {
 }
 
 h3 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 46.87px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46.87px;
 }
 
 @media (max-width: 768px) {
   h1 {
-      font-size: 30px;
-      line-height: 37.2px;
-    }
-  
-    h2 {
-      font-size: 24px;
-      line-height: 36px;
-    }
-  
-    h3 {
-      font-size: 20px;
-      line-height: 25.4px;
-    }
+    font-size: 30px;
+    line-height: 37.2px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 25.4px;
+  }
 }
 
 .shake {
@@ -60,27 +60,28 @@ h3 {
 
 .mentor-parent {
   background: #fff;
-    height: 449.77px;
-    left: 35.21px;
-    border-radius: 15.51px;
-    border: 1.5px;
-    opacity: 0px;
-    transform: rotate(3deg);
-    border: 1.5px solid #F1FFFB;
-    box-shadow: 0px 9.31px 15.51px 0px #0000001A;
+  height: 449.77px;
+  left: 35.21px;
+  border-radius: 15.51px;
+  border: 1.5px;
+  opacity: 0px;
+  transform: rotate(3deg);
+  border: 1.5px solid #F1FFFB;
+  box-shadow: 0px 9.31px 15.51px 0px #0000001A;
 }
+
 .mentor-child {
   background: #fff;
-    height: 434.26px;
-    top: 20.66px;
-    left: -0.38px;
-    padding: 60px 19.97px 79.68px 18.07px;
-    gap: 0px;
-    border-radius: 15.51px;
-    transform: rotate(-4deg);
-    border: 1.5px solid #F1FFFB;
-    box-shadow: 0px 9.31px 15.51px 0px #0000001A;
-    border: 1.5px ;
+  height: 434.26px;
+  top: 20.66px;
+  left: -0.38px;
+  padding: 60px 19.97px 79.68px 18.07px;
+  gap: 0px;
+  border-radius: 15.51px;
+  transform: rotate(-4deg);
+  border: 1.5px solid #F1FFFB;
+  box-shadow: 0px 9.31px 15.51px 0px #0000001A;
+  border: 1.5px;
 }
 
 .mentee {
@@ -97,7 +98,9 @@ h3 {
 .mentee:hover p:first-child {
   color: #01100A;
 }
-.mentee:hover p:last-child, .mentee:hover p.cont {
+
+.mentee:hover p:last-child,
+.mentee:hover p.cont {
   color: #006A50;
 }
 
@@ -123,9 +126,11 @@ h3 {
 }
 
 .border-grad {
-  border: 1px solid transparent; /* Define a border, 'transparent' can be replaced with any color */
+  border: 1px solid transparent;
+  /* Define a border, 'transparent' can be replaced with any color */
   border-image-source: linear-gradient(180deg, #D8FAF2 0%, rgba(1, 16, 10, 0.78) 100%);
-  border-image-slice: 1; /* This slices the gradient at all corners and fills the border */
+  border-image-slice: 1;
+  /* This slices the gradient at all corners and fills the border */
   border-radius: 15px;
   padding: 40px;
   border: 1px solid;
@@ -149,9 +154,9 @@ h3 {
 
 .react-calendar__navigation {
   display: flex;
-font-size: 14px;
-line-height: 14px;
-margin-bottom: 22px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 22px;
 }
 
 .react-calendar__navigation__prev2-button,
@@ -162,6 +167,7 @@ margin-bottom: 22px;
 .react-calendar__month-view__weekdays {
   padding: 12px 0;
 }
+
 .react-calendar__month-view__days button {
   padding: 10px 0;
 }
@@ -182,13 +188,32 @@ abbr:where([title]) {
   border-bottom: none !important;
 }
 
-.link:hover, .active {
+.link:hover,
+.active {
   border-right: 3px solid var(--Accent, #FFC145);
   background: #066921;
   color: #fff;
 }
 
-.link:hover img, .active img, .active1 img {
+.link:hover img,
+.active img,
+.active1 img {
   filter: brightness(0) invert(1) !important;
 }
 
+button.bg-primary {
+  background: linear-gradient(50.51deg, #0938CE -0.08%, #1385E6 111.62%) !important;
+}
+
+button.bg-primary:hover {
+  background: #0938CE !important;
+}
+
+button.bg-transparent {
+  border-color: linear-gradient(50.51deg, #0938CE -0.08%, #1385E6 111.62%) !important;
+}
+
+button.bg-transparent:hover {
+  background: linear-gradient(50.51deg, #0938CE -0.08%, #1385E6 111.62%);
+  color: #fff !important;
+}

@@ -25,10 +25,11 @@ const LoginPage = () => {
                 <div className="text-center">
                     <div className="bg-white p-4 rounded-lg shadow-md">
                         <Image
-                            src="/f-logo.png" 
+                            src='/logo.svg'
                             alt="Logo"
-                            width={120}
-                            height={40}
+                            width={63}
+                            height={63}
+                            className="object-cover"
                         />
                     </div>
                 </div>
@@ -36,12 +37,12 @@ const LoginPage = () => {
 
             {/* Right Side (Form Section) */}
             <div className="lg:w-[610px] bg-white p-5  my-10">
-                       <div className="mb-6">
-                        <h1>Welcome Name!</h1>
-                        <p className="text-subtext">
-                            &quot;Lorem ipsum dolor sit amet consectetur. Tellus cursus natoque aenean tortor.&quot;
-                        </p>
-                    </div>
+                <div className="mb-6">
+                    <h1>Welcome Name!</h1>
+                    <p className="text-subtext">
+                        &quot;Lorem ipsum dolor sit amet consectetur. Tellus cursus natoque aenean tortor.&quot;
+                    </p>
+                </div>
                 <div className="w-full space-y-2 border-grad">
                     <h3 className='text-center mb-8'>Login</h3>
                     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -77,11 +78,11 @@ const LoginPage = () => {
                         </div>
 
                         {/* Forgot password */}
-                            <div className="text-sm text-right">
-                                <a href="/forgot-password" className="font-medium text-text">
-                                    Forgot password?
-                                </a>
-                            </div>
+                        <div className="text-sm text-right">
+                            <a href="/forgot-password" className="font-medium text-text">
+                                Forgot password?
+                            </a>
+                        </div>
 
                         {/* Submit button */}
                         <div>
@@ -125,7 +126,7 @@ const LoginPage = () => {
                         </a>
                     </div>
                 </div>
-             
+
             </div>
         </div>
     );

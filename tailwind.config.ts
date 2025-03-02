@@ -14,11 +14,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
         colors: {
-        primary: '#006A50', // Primary color
+        primary: '#0A39CF', // Primary color
         secondary: '#D8FAF2', // Secondary color
-        tertiary: '#066921', // Secondary color
+        tertiary: '#0034BA', // Secondary color
         accent: '#FFC145', // Accent color
-        background: '#F1FFFB', // Background color
+        background: '#F1FCFF', // Background color
         subtext: '#525353', // Subtext color
         text: '#01100A', // Text color
         dashboard1: '#171819', // Background dashboard1 color

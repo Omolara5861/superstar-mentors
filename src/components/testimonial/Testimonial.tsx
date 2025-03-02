@@ -163,17 +163,17 @@ const TestimonialCarousel = () => {
                                 className="object-cover"
                             />
                         </div>
-               </div>
+                    </div>
                     {/* Testimonial Box */}
                     <div className="bg-white w-full lg:w-3/5 lg:px-[61px] px-3 pt-[109px] pb-5 rounded-2xl testimonial-shadow mx-auto text-center relative mt-12">
                         {/* Central Profile Image */}
-                            <Image
-                                src={testimonials[currentIndex].image}
-                                alt={testimonials[currentIndex].author}
-                                width={112}
-                                height={112}
+                        <Image
+                            src={testimonials[currentIndex].image}
+                            alt={testimonials[currentIndex].author}
+                            width={112}
+                            height={112}
                             className="w-36 h-36 -mt-16 rounded-full object-cover absolute left-1/2  -translate-x-1/2 top-0"
-                            />
+                        />
                         <p className="text-[#01100A80] italic mb-4">
                             {testimonials[currentIndex].text}
                         </p>

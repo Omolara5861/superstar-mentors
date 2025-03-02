@@ -4,12 +4,18 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#002C1C] text-[#FEFEFF] py-[133px]">
+        <footer className="bg-tertiary text-[#FEFEFF] py-[133px]">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-start">
                     {/* Logo and Description */}
                     <div className="lg:w-1/4 mb-8 lg:mb-0">
-                        <Image width={172} height={56} src="/f-logo.png" alt="Footer Logo" />
+                        <Image
+                            src='/f-logo.svg'
+                            alt="Logo"
+                            width={85}
+                            height={85}
+                            className="object-cover"
+                        />
                         <p className="text-sm mt-4">
                             Lorem ipsum dolor sit amet consectetur. Tellus cursus natoque aenean tortor. Non acc
                         </p>
