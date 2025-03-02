@@ -83,7 +83,7 @@ const Meeting = () => {
                     <div className="flex-1 space-y-3 overflow-y-auto max-h-[570px]">
                         {messages.map((msg, index) => (
                             <div key={index} className={`flex ${msg.role === "mentor" ? "justify-end" : ""}`}>
-                                <div className={`p-5 mb-[50px] rounded-lg max-w-xs relative ${msg.role === "mentor" ? "bg-primary text-[#F5F5F5]" : "bg-[#F1FFFB] text-subtext"}`}>
+                                <div className={`p-5 mb-[50px] rounded-lg max-w-xs relative ${msg.role === "mentor" ? "bg-primary text-[#F5F5F5]" : "bg-background text-subtext"}`}>
                                     <ProfileImage role={msg.role} />
                                     <h6 className="font- medium text-xs mt-2">{msg.sender}</h6>
                                     <p className="text-sm">{msg.text}</p>

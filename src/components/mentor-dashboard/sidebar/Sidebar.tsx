@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import path from 'path';
 import { useEffect, useState } from 'react';
 
 const Sidebar = () => {
@@ -58,14 +57,14 @@ const Sidebar = () => {
         <div className='lg:w-1/5'>
             <div className="w-1/5 h-screen bg-white p-4 sidebar hidden lg:block fixed">
                 <div className="mb-10">
-                    <Image width={172} height={56} src="/f-logo.png" alt="Footer Logo" />
+                    <Image width={83} height={83} src="/logo.svg" alt="Footer Logo" />
                 </div>
                 <nav>
                     <ul>
                         {links.map(link => (
                             <li className="mb-4" key={link.href}>
                                 <Link
-                                    className={`flex p-2 rounded items-center text-[#205924] link ${pathname === link.href ? 'active' : ''
+                                    className={`flex p-2 rounded items-center text-primary link ${pathname === link.href ? 'active' : ''
                                         }`}
                                     href={link.href}
                                 >
@@ -75,7 +74,7 @@ const Sidebar = () => {
                             </li>
                         ))}
                         <li className='absolute bottom-3'>
-                            <Link className="flex items-center text-[#FF0000] hover:text-green-500" href=''>
+                            <Link className="flex items-center text-[#FF0000] hover:text-primary" href=''>
                                 <Image width={24} height={24} src='/icons/logout.svg' alt='Logout icon' />
                                 <span className="ml-3">Logout</span>
                             </Link>
@@ -138,14 +137,14 @@ const Sidebar = () => {
                         <ul>
                             {links.map(link => (
                                 <li className="mb-6" key={link.href}>
-                                    <Link className="flex items-center text-gray-600 hover:text-green-500" href={link.href}>
+                                    <Link className="flex items-center text-gray-600 hover:text-primary" href={link.href}>
                                         <Image width={24} height={24} src={link.src} alt={link.alt} />
                                         <span className="ml-3">{link.text}</span>
                                     </Link>
                                 </li>
                             ))}
                             <li className='absolute bottom-3'>
-                                <Link className="flex items-center text-[#FF0000] hover:text-green-500" href=''>
+                                <Link className="flex items-center text-[#FF0000] hover:text-primary" href=''>
                                     <Image width={24} height={24} src='/icons/logout.svg' alt='Logout icon'/>
                                     <span className="ml-3">Logout</span>
                                 </Link>

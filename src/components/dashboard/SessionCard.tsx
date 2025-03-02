@@ -29,7 +29,7 @@ const Card: React.FC<CardProps> = ({
     mentorImage,
 }) => {
     return (
-        <div className="relative flex flex-col rounded-lg bg-[#066921] p-3 text-[#f5f5f5] text-sm font-semibold">
+        <div className="relative flex flex-col rounded-lg bg-primary p-3 text-[#f5f5f5] text-sm font-semibold">
             {/* Top: Title & Live/Time Indicator */}
             <div className="flex justify-between items-center">
                 <div>

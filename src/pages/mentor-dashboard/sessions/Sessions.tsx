@@ -118,8 +118,8 @@ const Sessions = () => {
                                 key={tab}
                                 onClick={() => setActiveTab(tab.toLowerCase())}
                                 className={`py-2 px-4 ${activeTab === tab.toLowerCase()
-                                    ? "border-b-2 border-green-600 text-green-600 font-bold"
-                                    : "text-gray-500 hover:text-green-600"
+                                    ? "border-b-2 border-primary text-primary font-bold"
+                                    : "text-gray-500 hover:text-primary"
                                     }`}
                             >
                                 {tab} (0)

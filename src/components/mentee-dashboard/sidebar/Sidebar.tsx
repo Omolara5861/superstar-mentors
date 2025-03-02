@@ -57,7 +57,7 @@ const Sidebar = () => {
         <div className='lg:w-1/5'>
             <div className="w-1/5 h-screen bg-white p-4 sidebar hidden lg:block fixed">
                 <div className="mb-10">
-                    <Image width={172} height={56} src="/f-logo.png" alt="Footer Logo" />
+                    <Image width={83} height={83} src="/f-logo.svg" alt="Footer Logo" />
                 </div>
                 <nav>
                     <ul>
