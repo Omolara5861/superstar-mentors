@@ -1,21 +1,45 @@
 "use client"
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import apiClient from '../../lib/apiClient';
+import Cookies from 'js-cookie';
 
 const LoginPage = () => {
-    const [form, setForm] = useState({
-        email: '',
-        password: '',
-    });
+    const router = useRouter();
+    const [form, setForm] = useState({ username: '', password: '' });
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', form);
+        if (!form.username || !form.password) {
+            toast.error('Username and password are required.');
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const { data } = await apiClient.post('/auth/token/', {
+                username: form.username,
+                password: form.password,
+            });
+
+            // store tokens
+            Cookies.set('accessToken', data.access, { secure: true, sameSite: 'Lax' });
+            Cookies.set('refreshToken', data.refresh, { secure: true, sameSite: 'Lax' });
+
+            toast.success('Logged in successfully!');
+            router.push('/dashboard'); // or wherever
+        } catch (err: any) {
+            toast.error(err.response?.data?.detail || 'Invalid credentials');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -38,7 +62,7 @@ const LoginPage = () => {
             {/* Right Side (Form Section) */}
             <div className="lg:w-[610px] bg-white p-5  my-10">
                 <div className="mb-6">
-                    <h1>Welcome Name!</h1>
+                    <h1>Welcome {form.username}!</h1>
                     <p className="text-subtext">
                         &quot;Lorem ipsum dolor sit amet consectetur. Tellus cursus natoque aenean tortor.&quot;
                     </p>
@@ -48,15 +72,15 @@ const LoginPage = () => {
                     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                         <div className="rounded-md shadow-sm space-y-4">
                             <div>
-                                <label htmlFor="email" className="uppercase text-text">
-                                    Email
+                                <label htmlFor="username" className="uppercase text-text">
+                                    username
                                 </label>
                                 <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    placeholder="Email"
-                                    value={form.email}
+                                    id="username"
+                                    name="username"
+                                    type="username"
+                                    placeholder="Username"
+                                    value={form.username}
                                     onChange={handleChange}
                                     className="appearance-none rounded-md relative block w-full px-5 py-4 border border-subtext placeholder-text text-text focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
                                 />
@@ -88,9 +112,10 @@ const LoginPage = () => {
                         <div>
                             <button
                                 type="submit"
+                                disabled={loading}
                                 className="w-full bg-primary hover:bg-[#002C1C] text-white font-medium py-4 rounded-lg"
                             >
-                                Login
+                                {loading ? 'Signing in…' : 'Login'}
                             </button>
                         </div>
 

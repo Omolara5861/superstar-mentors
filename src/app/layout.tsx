@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/footer/Footer";
-import Navbar from "../components/navbar/Navbar";
-
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const inter = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,7 +20,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <main>
           {children}
-         </main>
+          <ToastContainer />
+        </main>
       </body>
     </html>
   );
