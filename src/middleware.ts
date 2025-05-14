@@ -64,8 +64,8 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    '/admin/:path*',
-    '/mentee-dashboard/:path*',
-    '/mentor-dashboard/:path*',
+    // '/admin/:path*',
+    // '/mentee-dashboard/:path*',
+    // '/mentor-dashboard/:path*',
   ],
 };

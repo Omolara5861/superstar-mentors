@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import apiClient from '../../lib/apiClient';
 import Cookies from 'js-cookie';
+import { getUserRole } from '../../lib/jwtUtils';
 
 const LoginPage = () => {
     const router = useRouter();
@@ -15,32 +16,36 @@ const LoginPage = () => {
         setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!form.username || !form.password) {
-            toast.error('Username and password are required.');
-            return;
-        }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.username || !form.password) {
+      toast.error('Username and password are required.');
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data } = await apiClient.post('/auth/token/', {
+        username: form.username,
+        password: form.password,
+      });
+      Cookies.set('accessToken', data.access, { secure: true, sameSite: 'Lax' });
+      Cookies.set('refreshToken', data.refresh, { secure: true, sameSite: 'Lax' });
 
-        setLoading(true);
-        try {
-            const { data } = await apiClient.post('/auth/token/', {
-                username: form.username,
-                password: form.password,
-            });
-
-            // store tokens
-            Cookies.set('accessToken', data.access, { secure: true, sameSite: 'Lax' });
-            Cookies.set('refreshToken', data.refresh, { secure: true, sameSite: 'Lax' });
-
-            toast.success('Logged in successfully!');
-            router.push('/dashboard'); // or wherever
-        } catch (err: any) {
-            toast.error(err.response?.data?.detail || 'Invalid credentials');
-        } finally {
-            setLoading(false);
-        }
-    };
+      // decode role and route
+      const role = getUserRole(data.access);
+      if (role === 'Mentor') {
+        toast.success('Welcome, Mentor!');
+        router.push('/mentor-dashboard');
+      } else {
+        toast.success('Welcome!');
+        router.push('/mentee-dashboard');
+      }
+    } catch (err: any) {
+      toast.error(err.response?.data?.detail || 'Invalid credentials');
+    } finally {
+      setLoading(false);
+    }
+  };
 
     return (
         <div className="lg:min-h-screen flex flex-col lg:flex-row lg:gap-[125px]">
